@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Nav from './components/nav';
+import Shell from './components/shell';
+import Headline from './components/headline';
 
 function App() {
   return (
-    <div className="App">
-        JoshuaDotWorks!
-    </div>
+    <Shell>
+        <Nav/>
+        <div className="content">
+          <Headline />
+        </div>
+    </Shell>
   );
 }
 

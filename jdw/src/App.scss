@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+// VARIABLES
+$dark-color: #444444;
+
+html {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  font-family: "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  background-image: url('/subtle_dots.png');
+}
+
+#root {
+  height: 90%;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 300;
+  color: $dark-color;
+}
+
+.shell {
+  max-width: 1040px;
+  margin: 20px auto;
+	height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.nav {
+  height: 64px;
+  flex: 2;
+  .logo {
+    width: 64px;
+  }
+
+
+  .navItems {
+    margin-top: 24px; 
+    margin-left: 16px;
+    vertical-align: top;
+    display: inline-block;
+    a.navItem {
+      margin: 0 16px;
+      font-weight: 300;
+      text-decoration: none;
+      color: $dark-color;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+	flex-direction: column;
+}
+
+
+.headline {
+  align-self: flex-end;
+}
