@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 type NavItemProps = {
     page: string,
@@ -9,9 +10,9 @@ export default class NavItem extends Component<NavItemProps> {
 
     render() {
         return (
-            <a className="navItem" href={this.props.page}>
+            <Link to={this.props.page}>
                 {this.props.label}
-            </a>
+            </Link>
         )
     }
 }

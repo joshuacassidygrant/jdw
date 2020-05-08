@@ -9,8 +9,8 @@ export default class Nav extends Component {
             <div className="nav">
                 <img alt="JoshuaDotWorks logo" className="logo" src="/jg_dark512.png" />
                 <div className="navItems">
-                    <NavItem label="HOME" page="" />
-                    <NavItem label="RESUME" page="" />
+                    <NavItem label="HOME" page="/" />
+                    <NavItem label="RESUME" page="/resume" />
                     <NavItem label="PROJECTS" page="" />
                     <NavItem label="BLOG" page="" />
                     <NavItem label="CONTACT" page="" />
