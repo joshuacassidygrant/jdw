@@ -7,9 +7,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 import Resume from './pages/resume';
+
 
 function App() {
   return (

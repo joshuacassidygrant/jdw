@@ -5,6 +5,9 @@ let ResumeRecord = new Schema({
     record_type: {
         type: String
     },
+    record_subtype: {
+        type: String
+    },
     record_title: {
         type: String
     },

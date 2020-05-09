@@ -24,7 +24,7 @@ app.listen(PORT, function() {
 const routes = express.Router();
 app.use("/api", routes);
 
-routes.route('/').get((req, res) => {
+routes.route('/resume').get((req, res) => {
     ResumeRecord.find((err, records) => {
         if (err) {
             console.log(err);
