@@ -5,7 +5,11 @@ export default class Resume extends Component {
 
     render() {
         return (
-            <ResumeSection title="Languages" type="skill" subtype="language" />
+            <div>
+                <ResumeSection title="Technologies" type="skill" subtype="technology" renderer="inline"/>
+                <ResumeSection title="Languages" type="skill" subtype="language" renderer="inline"/>
+                <ResumeSection title="Work History" type="work" subtype="tech" renderer="block"/>
+            </div>
         )
     }
 

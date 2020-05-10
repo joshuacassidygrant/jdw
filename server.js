@@ -24,12 +24,22 @@ app.listen(PORT, function() {
 const routes = express.Router();
 app.use("/api", routes);
 
-routes.route('/resume').get((req, res) => {
+routes.route('/resume/:type').get((req, res) => {
     ResumeRecord.find((err, records) => {
         if (err) {
             console.log(err);
         } else {
-            res.json(records);
+            res.json(records.filter(record => record.record_type == req.params.type));
+        }
+    });
+});
+
+routes.route('/resume/:type/:subtype').get((req, res) => {
+    ResumeRecord.find((err, records) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(records.filter(record => record.record_type == req.params.type && record.record_subtype == req.params.subtype));
         }
     });
 });

@@ -68,3 +68,22 @@ h1 {
 .headline {
   align-self: flex-end;
 }
+
+
+/**
+RESUME
+*/
+
+.resume_section {
+  li.record_inline {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #444;
+    color: #fff;
+    margin: 4px;
+  }
+
+  li.record_block {
+    list-style-type: none;
+  }
+}
