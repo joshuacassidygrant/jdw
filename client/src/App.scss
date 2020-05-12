@@ -26,6 +26,7 @@ h1 {
   font-size: 48px;
   font-weight: 300;
   color: $dark-color;
+  margin-top: 0;
 }
 
 .shell {
@@ -70,6 +71,9 @@ h1 {
   align-self: flex-end;
 }
 
+#line_canvas {
+
+}
 
 /**
 RESUME
