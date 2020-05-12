@@ -4,5 +4,7 @@ export default interface ResumeRecord {
     record_title: String,
     record_date: String,
     record_text: String,
-    record_priority: Number
+    record_priority: Number,
+    record_subitems: String[],
+    record_relevance: Number
 }

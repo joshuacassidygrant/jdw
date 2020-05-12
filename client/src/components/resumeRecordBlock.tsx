@@ -6,7 +6,18 @@ export default class ResumeRecordBlock extends ResumeRecordRenderer<ResumeRecord
 
     render() {
         return (
-            <li className="record_block" key={this.props.index.toString()}>{this.props.record.record_title}</li>
+            <li className="record_block" key={this.props.index.toString()}>
+                <div className="head">
+                    <div className="left">{this.props.record.record_title}</div>
+                    <div className="right">{this.props.record.record_date}</div>
+                </div>
+                <p className="record_subtext">{this.props.record.record_text}</p>
+                <ul>
+                    {this.props.record.record_subitems.map((value, i) => {
+                        return <li key={i}>{value}</li>
+                    })}
+                </ul>
+            </li>
         )
     }
 

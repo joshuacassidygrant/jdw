@@ -6,7 +6,7 @@ export default class ResumeRecordInline extends ResumeRecordRenderer<ResumeRecor
 
     render() {
         return (
-            <li className="record_inline" key={this.props.index.toString()}>{this.props.record.record_title}</li>
+            <li className={"record_inline relevance_" + this.props.record.record_relevance} key={this.props.index.toString()}>{this.props.record.record_title}</li>
         )
     }
 

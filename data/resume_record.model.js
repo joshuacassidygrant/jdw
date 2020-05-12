@@ -19,6 +19,12 @@ let ResumeRecord = new Schema({
     },
     record_priority: {
         type: Number
+    },
+    record_subitems: {
+        type: [String]
+    },
+    record_relevance: {
+        type: Number
     }
 })
 
