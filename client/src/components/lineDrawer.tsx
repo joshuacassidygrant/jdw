@@ -67,6 +67,8 @@ export default class LineDrawer extends Component<LineDrawerProps, LineDrawerSta
     updateMouse = (event: any) => {
         let rect = this.rect as DOMRect;
 
+        if (rect == null) return;
+
         let cX = event.clientX - rect.left;
         let cY = event.clientY - rect.top;
         this.setState((state) => {
@@ -81,6 +83,7 @@ export default class LineDrawer extends Component<LineDrawerProps, LineDrawerSta
         if (this.c2d === null) return;
         let c2d = this.c2d as CanvasRenderingContext2D;
         
+        // TODO: improve this
 
         for (let i = 0; i < this.props.width; i = i + 4) {
             c2d.beginPath();

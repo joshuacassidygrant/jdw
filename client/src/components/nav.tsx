@@ -11,9 +11,9 @@ export default class Nav extends Component {
                 <div className="navItems">
                     <NavItem label="HOME" page="/" />
                     <NavItem label="RESUME" page="/resume" />
-                    <NavItem label="PROJECTS" page="" />
-                    <NavItem label="BLOG" page="" />
-                    <NavItem label="CONTACT" page="" />
+                    <NavItem label="PROJECTS" page="/projects" />
+                    <NavItem label="BLOG" page="/blog" />
+                    <NavItem label="CONTACT" page="/contact" />
                 </div>
             </div>
         )

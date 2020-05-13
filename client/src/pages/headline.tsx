@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LineDrawer from '../components/lineDrawer';
+import { Link } from 'react-router-dom';
 
 export default class Headline extends Component {
 
@@ -10,7 +11,7 @@ export default class Headline extends Component {
                 <h1>
                     <strong>Joshua Grant</strong> is a <strong>developer</strong>, <strong>writer</strong> and <strong>designer </strong>looking for work in <strong>Toronto</strong> or <strong> online</strong>.
                 </h1>
-                Check out my resume or contact me here.
+                Check out my <Link to="/resume">resume</Link> or <Link to="/contact">contact me</Link>  here.
             </div>
         )
     }
