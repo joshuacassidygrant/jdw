@@ -1,4 +1,5 @@
 const ResumeRecord = require('./data/resume_record.model.js');
+const Project = require('./data/resume_record.model.js');
 
 const express = require('express');
 const app = express();
@@ -23,6 +24,17 @@ app.listen(PORT, function() {
 
 const routes = express.Router();
 app.use("/api", routes);
+
+
+routes.route('/projects/').get((req, res) => {
+    Project.find((err, projects) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(projects);
+        }
+    });
+});
 
 routes.route('/resume/:type').get((req, res) => {
     ResumeRecord.find((err, records) => {
