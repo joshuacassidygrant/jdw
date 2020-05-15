@@ -1,5 +1,5 @@
 const ResumeRecord = require('./data/resume_record.model.js');
-const Project = require('./data/resume_record.model.js');
+const Project = require('./data/project.model.js');
 
 const express = require('express');
 const app = express();

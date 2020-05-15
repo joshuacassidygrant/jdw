@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ResumeRecordRenderer, { ResumeRecordProps } from './resumeRecordRenderer';
 
 export default class ResumeRecordInline extends ResumeRecordRenderer<ResumeRecordProps> {

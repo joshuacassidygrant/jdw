@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { API_URL } from '../config';
 import Project from '../data/Project';
+import ProjectItem from './projectItem';
 
 interface ProjectListState {
     projects: Project[]
@@ -15,7 +16,9 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
     componentDidMount = () => {
         fetch(API_URL + 'projects/')
             .then(res => res.json())
-            .then(projects => this.setState({projects}));
+            .then(projects => {
+                this.setState({projects});
+            });
     }
 
     render() {
@@ -23,9 +26,12 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
             return ("...");
         }
         return (
-            <p>
-                {JSON.stringify(this.state.projects)}
-            </p>
-        )
+            <ul>
+                 {this.state.projects.map((project, index) => {
+                    return <ProjectItem project={project} />
+                 })}
+            </ul>
+               
+        );
     }
 }
