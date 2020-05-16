@@ -16,6 +16,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
   justify-content: center;
   background-image: url('/subtle_dots.png');
+
+  a {
+    color: $dark-color;
+    font-weight: bold;
+    border-bottom: 2px solid $dark-color;
+    text-decoration: none;
+    transition: all 0.5s;
+
+  }
+
+  a:hover {
+    color: $gray-color; 
+    border-bottom: 2px solid $gray-color;
+
+  }
+
+
 }
 
 #root {
@@ -87,15 +104,18 @@ li.project_item {
   list-style-type: none;
   display: flex;
   width: 100%;
-  background-color: #eee;
   padding: 16px;
   margin-bottom: 8px;
+  border: 2px solid $gray-color;
 
   img {
     width: 128px;
     height: 128px;
     margin-right: 16px;
     flex: 0 0 128px;
+    border: 2px solid $gray-color;
+
+
   }
 
   div {
@@ -105,15 +125,31 @@ li.project_item {
       display: flex;
       width: 100%;
       justify-content: space-between;
+      height: 40px;
 
   
       h2 {
-        margin-top: 0;
+        margin: 0;
+        font-weight: lighter;
+        text-transform: uppercase;
+        color: $dark-color;
       }
   
       p.project_status {
-        color: #444444;
+        color: $dark-color;
         display: flex;
+      }
+    }
+
+    ul.project_tags {
+      padding-left: 0;
+      li {
+        display: inline-block;
+        padding: 4px 8px;
+        background-color: $dark-color;
+        color: #fff;
+        margin-right: 4px;
+        border: solid 2px $gray-color;
       }
     }
   }
