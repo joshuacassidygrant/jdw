@@ -26,7 +26,7 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
             return ("...");
         }
         return (
-            <ul>
+            <ul className="project_list">
                  {this.state.projects.map((project, index) => {
                     return <ProjectItem project={project} />
                  })}

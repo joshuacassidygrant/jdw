@@ -78,20 +78,49 @@ h1 {
 /**
 PROJECT
 */
+ul.project_list {
+  padding-left: 0;
+}
+
 li.project_item {
 
   list-style-type: none;
   display: flex;
+  width: 100%;
+  background-color: #eee;
+  padding: 16px;
+  margin-bottom: 8px;
 
   img {
     width: 128px;
     height: 128px;
     margin-right: 16px;
+    flex: 0 0 128px;
   }
 
-  h2 {
-    margin-top: 0;
+  div {
+    width: 100%;
+
+    .project_header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+  
+      h2 {
+        margin-top: 0;
+      }
+  
+      p.project_status {
+        color: #444444;
+        display: flex;
+      }
+    }
   }
+
+
+
+
 }
 
 /**

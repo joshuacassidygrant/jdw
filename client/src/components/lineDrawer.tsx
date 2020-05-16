@@ -85,7 +85,7 @@ export default class LineDrawer extends Component<LineDrawerProps, LineDrawerSta
         
         // TODO: improve this
 
-        for (let i = 0; i < this.props.width; i = i + 4) {
+        for (let i = 0; i < this.props.width; i = i + 2) {
             c2d.beginPath();
             
             let distX = Math.abs(this.state.mx - i);

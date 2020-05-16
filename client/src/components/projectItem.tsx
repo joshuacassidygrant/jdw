@@ -12,8 +12,14 @@ export default class ProjectItem extends Component<ProjectItemProps> {
             <li className="project_item">
                 <img src={this.props.project.project_image}/>
                 <div>
-                    <h2>{this.props.project.project_title}</h2>
-                    <p>{this.props.project.project_description}</p>
+                    <div className="project_header">
+                        <h2>{this.props.project.project_title} ({this.props.project.project_year}) </h2>
+                        <p className="project_status">{this.props.project.project_status}</p>
+                    </div>
+                    <div>
+                        <p>{this.props.project.project_description}</p>
+                        <a href={this.props.project.project_link} target="_blank">LINK</a>
+                    </div>
                 </div>
             </li>
         )
