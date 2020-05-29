@@ -10,13 +10,14 @@ const PORT = 4000;
 const nodemailer = require('nodemailer');
 const creds = require('./creds');
 
-
+const dbName = process.env.MONGODB_NAME;
+const url  = process.env.MONGODB_URI;
 
 app.use(cors());
 app.use(bodyParser.json());
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/jdw', { useNewUrlParser: true });
+mongoose.connect(`${dbName}/${url}`, { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -26,6 +27,12 @@ connection.once('open', function() {
 app.listen(PORT, function() {
     console.log("Server running on port " + PORT);
 });
+
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+}
 
 const routes = express.Router();
 app.use("/api", routes);
