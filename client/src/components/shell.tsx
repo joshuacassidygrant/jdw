@@ -3,7 +3,7 @@ import React, {Component} from "react";
 export default class Shell extends Component {
 
     render() {
-        return(
+        return (
             <div className="shell">
                 {this.props.children}
             </div>
