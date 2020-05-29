@@ -15,6 +15,7 @@ import ComingSoon from './pages/coming';
 
 
 function App() {
+  console.log("yo");
   return (
     <Router>
       <Shell>
