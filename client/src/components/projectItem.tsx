@@ -10,7 +10,7 @@ export default class ProjectItem extends Component<ProjectItemProps> {
     render() {
         return (
             <li className="project_item">
-                <img src={this.props.project.project_image}/>
+                <img src={this.props.project.project_image} alt={this.props.project.project_title}/>
                 <div>
                     <div className="project_header">
                         <h2>{this.props.project.project_title} ({this.props.project.project_year}) </h2>
@@ -25,7 +25,7 @@ export default class ProjectItem extends Component<ProjectItemProps> {
                     </ul>
                     <div>
                         <p>{this.props.project.project_description}</p>
-                        <a href={this.props.project.project_link} target="_blank">LINK</a>
+                        <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">LINK</a>
                     </div>
                 </div>
             </li>

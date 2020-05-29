@@ -212,8 +212,14 @@ RESUME
 CONTACT
 */
 
+
+
 .form_holder {
   height: 480px;
+    p.status {
+      font-style:italic;
+      color: $gray-color;
+    }
 }
 
 form.contact_form {
@@ -238,6 +244,22 @@ form.contact_form {
       height: 240px;
     }
 
-
   }
+  
+  button {
+    border: 1px solid $dark-color;
+    border-radius: 0;
+    padding: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+  
+    &:hover {
+      background-color: $gray-color;
+      color: #fff;
+    }
+  }
+
+
 }

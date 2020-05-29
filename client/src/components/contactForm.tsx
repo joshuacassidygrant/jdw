@@ -27,7 +27,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
     }
 
     render = () => {
-        if (this.state.status != "") {
+        if (this.state.status !== "") {
             return (
                 <div className="form_holder">
                     <p className="status">{this.state.status}</p>
@@ -50,7 +50,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
                         <label htmlFor="message">Message</label>
                         <textarea name="message" value={this.state.message} onChange={this.handleMessageChange.bind(this)} id="message"></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         )

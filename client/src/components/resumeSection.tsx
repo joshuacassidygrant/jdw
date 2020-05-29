@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {API_URL} from '../config';
 import ResumeRecord from '../data/ResumeRecord';
-import ResumeRecordRenderer from './resumeRecordRenderer';
 import ResumeRecordInline from './resumeRecordInline';
 import ResumeRecordBlock from './resumeRecordBlock';
 
