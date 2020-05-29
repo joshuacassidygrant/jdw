@@ -8,8 +8,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = 4000;
 const nodemailer = require('nodemailer');
-const creds = require('./creds');
-
+//const creds = require('./creds');
+const emailUser = process.env.EM_USER;
+const emailPass = process.env.EM_PASS;
 const dbName = process.env.MONGODB_NAME;
 const url  = process.env.MONGODB_URI;
 
@@ -98,8 +99,8 @@ routes.route('/send').post((req, res) => {
   let transport = {
     host: 'smtp.gmail.com',
     auth: {
-      user: creds.USER,
-      pass: creds.PASS
+      user: emailUser,
+      pass: emailPass
     }
   }
   
