@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = 4000;
 const nodemailer = require('nodemailer');
+var path = require('path');
 //const creds = require('./creds');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
