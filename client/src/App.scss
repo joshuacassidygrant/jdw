@@ -207,3 +207,37 @@ RESUME
     }
   }
 }
+
+/**
+CONTACT
+*/
+
+.form_holder {
+  height: 480px;
+}
+
+form.contact_form {
+
+  .form_group {
+    padding: 16px 0;
+
+    label {
+      display: block;
+      font-size: 0.85em;
+      text-transform: uppercase;
+    }
+  
+    input {
+      max-width: 480px;
+      width: 100%;
+    }
+
+    textarea {
+      width: 480px;
+      resize: none;
+      height: 240px;
+    }
+
+
+  }
+}

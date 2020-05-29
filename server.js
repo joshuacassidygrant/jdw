@@ -7,6 +7,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const PORT = 4000;
+const nodemailer = require('nodemailer');
+const creds = require('./creds');
+
+
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -55,3 +59,48 @@ routes.route('/resume/:type/:subtype').get((req, res) => {
         }
     });
 });
+
+
+routes.route('/send').post((req, res) => {
+    var name = req.body.name
+    var email = req.body.email
+    var message = req.body.message
+    var content = `name: ${name} \n email: ${email} \n message: ${content} `
+  
+    var mail = {
+      from: name,
+      to: "jc.grant22@gmail.com",  //Change to email address that you want to receive messages on
+      subject: 'New Message from Contact Form',
+      text: content
+    }
+  
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          msg: 'fail'
+        })
+      } else {
+        res.json({
+          msg: 'success'
+        })
+      }
+    })
+  })
+
+  let transport = {
+    host: 'smtp.gmail.com',
+    auth: {
+      user: creds.USER,
+      pass: creds.PASS
+    }
+  }
+  
+  let transporter = nodemailer.createTransport(transport)
+  transporter.verify((error, success) => {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Server is ready to take messages');
+    }
+  });
+  
