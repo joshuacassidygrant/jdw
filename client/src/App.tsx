@@ -18,7 +18,7 @@ function App() {
   console.log("yo");
   return (
     <div>
-      test
+        <Headline />
     </div>
   );
   /*return (
