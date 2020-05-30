@@ -15,7 +15,6 @@ import ComingSoon from './pages/coming';
 
 //            
 /*
-<Router>
         <Shell>
             <div className="content">
               <Switch>
@@ -37,10 +36,11 @@ import ComingSoon from './pages/coming';
               </Switch>
             </div>
         </Shell>
-      </Router>
 */
 const App = () => (
-  <Nav/>
+  <Router>
+    <Nav/>
+  </Router>
 )
 
 export default App;
