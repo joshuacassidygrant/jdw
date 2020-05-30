@@ -19,7 +19,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 
-mongoose.connect(`${dbName}/${url}`, { useNewUrlParser: true });
+mongoose.connect(`${url}/${dbName}`, { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
@@ -30,9 +30,15 @@ app.listen(PORT, function() {
     console.log("Server running on port " + PORT);
 });
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+}
 
 const routes = express.Router();
 app.use("/api", routes);
+
+
 
 
 routes.route('/projects/').get((req, res) => {
@@ -114,12 +120,4 @@ routes.route('/send').post((req, res) => {
       }
     });
   }
-
-
-
-  
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-
-}
   
