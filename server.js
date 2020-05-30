@@ -12,8 +12,8 @@ var path = require('path');
 //const creds = require('./creds');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
-const dbName = process.env.MONGODB_NAME;
-const url  = process.env.MONGODB_URI;
+const dbName = process.env.MONGODB_NAME ||  'jdw';
+const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -30,11 +30,6 @@ app.listen(PORT, function() {
     console.log("Server running on port " + PORT);
 });
 
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-
-}
 
 const routes = express.Router();
 app.use("/api", routes);
@@ -96,6 +91,7 @@ routes.route('/send').post((req, res) => {
       }
     })
   })
+  
 
   let transport = {
     host: 'smtp.gmail.com',
@@ -105,12 +101,25 @@ routes.route('/send').post((req, res) => {
     }
   }
   
-  let transporter = nodemailer.createTransport(transport)
-  transporter.verify((error, success) => {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Server is ready to take messages');
-    }
-  });
+
+  let transporter;
+
+  if (emailUser != null) {
+    transporter = nodemailer.createTransport(transport)
+    transporter.verify((error, success) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Server is ready to take messages');
+      }
+    });
+  }
+
+
+
+  
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
+}
   
