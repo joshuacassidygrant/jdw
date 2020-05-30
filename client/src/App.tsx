@@ -14,12 +14,7 @@ import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
 /*
-                <Route path="/resume">
-                  <Resume />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
+
                 <Route path="/projects">
                   <Projects />
                 </Route>
@@ -39,6 +34,9 @@ const App = () => (
               <Switch>
                 <Route path="/resume">
                   <Resume />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
                 </Route>
               </Switch>
             </div>
