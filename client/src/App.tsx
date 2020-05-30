@@ -32,10 +32,11 @@ const App = () => (
                 <Route path="/blog">
                   <ComingSoon />
                 </Route>
-              </Switch>
-              <Route path="/">
+                <Route path="/">
                   <Headline />
                 </Route>
+              </Switch>
+
             </div>
         </Shell>
       </Router>
