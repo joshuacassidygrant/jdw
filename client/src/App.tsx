@@ -16,28 +16,28 @@ import ComingSoon from './pages/coming';
 
 const App = () => (
   <Router>
-    <Nav/>
         <Shell>
-            <div className="content">
-              <Switch>
-                <Route path="/resume">
-                  <Resume />
-                </Route>
-                <Route path="/projects">
-                  <Projects />
-                </Route>
-                <Route path="/contact">
-                  <Contact />
-                </Route>
-                <Route path="/blog">
-                  <ComingSoon />
-                </Route>
-                <Route path="/">
-                  <Headline />
-                </Route>
-              </Switch>
+          <Nav/>
+          <div className="content">
+            <Switch>
+              <Route path="/resume">
+                <Resume />
+              </Route>
+              <Route path="/projects">
+                <Projects />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/blog">
+                <ComingSoon />
+              </Route>
+              <Route path="/">
+                <Headline />
+              </Route>
+            </Switch>
 
-            </div>
+          </div>
         </Shell>
       </Router>
 )
