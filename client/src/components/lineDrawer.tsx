@@ -59,7 +59,6 @@ export default class LineDrawer extends Component<LineDrawerProps, LineDrawerSta
 
     render() {
         return (
-            // TODO: resizing
             <canvas onMouseMove={this.updateMouse}  width={this.props.width} height={this.props.height} id="line_canvas" />
         )
     }
