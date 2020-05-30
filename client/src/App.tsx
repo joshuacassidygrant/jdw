@@ -14,7 +14,7 @@ import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
 
-const App = () => {
+const App = () => (
   <Router>
         <Shell>
             <Nav/>
@@ -39,7 +39,7 @@ const App = () => {
             </div>
         </Shell>
       </Router>
-  }
+)
 
 export default App;
 
