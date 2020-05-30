@@ -13,16 +13,6 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
-/*
-
-
-                <Route path="/blog">
-                  <ComingSoon />
-                </Route>
-                <Route path="/">
-                  <Headline />
-                </Route>
-*/
 
 const App = () => (
   <Router>
@@ -39,7 +29,13 @@ const App = () => (
                 <Route path="/contact">
                   <Contact />
                 </Route>
+                <Route path="/blog">
+                  <ComingSoon />
+                </Route>
               </Switch>
+              <Route path="/">
+                  <Headline />
+                </Route>
             </div>
         </Shell>
       </Router>
