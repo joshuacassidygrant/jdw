@@ -15,9 +15,7 @@ import ComingSoon from './pages/coming';
 
 /*
 
-                <Route path="/projects">
-                  <Projects />
-                </Route>
+
                 <Route path="/blog">
                   <ComingSoon />
                 </Route>
@@ -34,6 +32,9 @@ const App = () => (
               <Switch>
                 <Route path="/resume">
                   <Resume />
+                </Route>
+                <Route path="/projects">
+                  <Projects />
                 </Route>
                 <Route path="/contact">
                   <Contact />
