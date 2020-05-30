@@ -13,11 +13,11 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
+//            <Nav/>
 
 const App = () => (
   <Router>
         <Shell>
-            <Nav/>
             <div className="content">
               <Switch>
                 <Route path="/resume">
