@@ -14,34 +14,32 @@ import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
 
-function App() {
-  console.log("yo");
-  return (
-    <Router>
-      <Shell>
-          <Nav/>
-          <div className="content">
-            <Switch>
-              <Route path="/resume">
-                <Resume />
-              </Route>
-              <Route path="/contact">
-                <Contact />
-              </Route>
-              <Route path="/projects">
-                <Projects />
-              </Route>
-              <Route path="/blog">
-                <ComingSoon />
-              </Route>
-              <Route path="/">
-                <Headline />
-              </Route>
-            </Switch>
-          </div>
-      </Shell>
-    </Router>
-  );
-}
+const App = () => {
+  <Router>
+        <Shell>
+            <Nav/>
+            <div className="content">
+              <Switch>
+                <Route path="/resume">
+                  <Resume />
+                </Route>
+                <Route path="/contact">
+                  <Contact />
+                </Route>
+                <Route path="/projects">
+                  <Projects />
+                </Route>
+                <Route path="/blog">
+                  <ComingSoon />
+                </Route>
+                <Route path="/">
+                  <Headline />
+                </Route>
+              </Switch>
+            </div>
+        </Shell>
+      </Router>
+  }
 
 export default App;
+
