@@ -16,7 +16,8 @@ import ComingSoon from './pages/coming';
 
 function App() {
   console.log("yo");
-  return (
+  return "test";
+  /*return (
     <Router>
       <Shell>
           <Nav/>
@@ -40,7 +41,7 @@ function App() {
             </Switch>
           </div>
       </Shell>
-    </Router>
+    </Router>*/
   );
 }
 
