@@ -14,7 +14,6 @@ import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
 /*
-              <Switch>
                 <Route path="/resume">
                   <Resume />
                 </Route>
@@ -30,7 +29,6 @@ import ComingSoon from './pages/coming';
                 <Route path="/">
                   <Headline />
                 </Route>
-              </Switch>
 */
 
 const App = () => (
@@ -38,7 +36,11 @@ const App = () => (
     <Nav/>
         <Shell>
             <div className="content">
-              t
+              <Switch>
+                <Route path="/resume">
+                  <Resume />
+                </Route>
+              </Switch>
             </div>
         </Shell>
       </Router>
