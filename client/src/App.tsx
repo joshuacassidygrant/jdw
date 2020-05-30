@@ -13,10 +13,7 @@ import Contact from './pages/contact';
 import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
-//            
 /*
-        <Shell>
-            <div className="content">
               <Switch>
                 <Route path="/resume">
                   <Resume />
@@ -34,13 +31,17 @@ import ComingSoon from './pages/coming';
                   <Headline />
                 </Route>
               </Switch>
-            </div>
-        </Shell>
 */
+
 const App = () => (
   <Router>
     <Nav/>
-  </Router>
+        <Shell>
+            <div className="content">
+              t
+            </div>
+        </Shell>
+      </Router>
 )
 
 export default App;
