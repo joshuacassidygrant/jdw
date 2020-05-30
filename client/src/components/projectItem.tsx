@@ -7,6 +7,9 @@ interface ProjectItemProps {
 
 export default class ProjectItem extends Component<ProjectItemProps> {
 
+    // <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">LINK</a>
+
+
     render() {
         return (
             <li className="project_item">
@@ -25,7 +28,6 @@ export default class ProjectItem extends Component<ProjectItemProps> {
                     </ul>
                     <div>
                         <p>{this.props.project.project_description}</p>
-                        <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">LINK</a>
                     </div>
                 </div>
             </li>
