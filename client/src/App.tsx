@@ -16,7 +16,11 @@ import ComingSoon from './pages/coming';
 
 function App() {
   console.log("yo");
-  return "test";
+  return (
+    <div>
+      test
+    </div>
+  );
   /*return (
     <Router>
       <Shell>
