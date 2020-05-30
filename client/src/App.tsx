@@ -17,11 +17,6 @@ import ComingSoon from './pages/coming';
 function App() {
   console.log("yo");
   return (
-    <div>
-        <Headline />
-    </div>
-  );
-  /*return (
     <Router>
       <Shell>
           <Nav/>
@@ -46,7 +41,7 @@ function App() {
           </div>
       </Shell>
     </Router>
-  );*/
+  );
 }
 
 export default App;
