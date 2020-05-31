@@ -4,6 +4,12 @@
 $dark-color: #444444;
 $gray-color: #888888;
 
+$max-width: 1040px;
+$mid-width: 860px;
+$midlow-width: 640px;
+$semimin-width: 480px;
+$min-width: 320px;
+
 html {
   height: 100vh;
 }
@@ -47,11 +53,31 @@ h1 {
 }
 
 .shell {
-  width: 1040px;
   margin: 20px auto;
 	height: 100%;
   display: flex;
   flex-direction: column;
+  width: $max-width;
+
+  @media (max-width: $max-width) {
+    width: $mid-width;
+  }
+  @media (max-width: $mid-width) {
+    width: $midlow-width;
+  }
+  @media (max-width: $midlow-width) {
+    width: $semimin-width;
+  }
+  @media (max-width: $semimin-width) {
+    width: $min-width;
+  }
+  @media (max-width: $min-width) {
+    width: 100%;
+  }
+
+
+
+
 }
 
 
@@ -60,6 +86,11 @@ h1 {
   flex: 2;
   .logo {
     width: 64px;
+
+    @media (max-width: $midlow-width) {
+      display: block;
+      margin: auto;
+    }
   }
 
 
@@ -73,24 +104,50 @@ h1 {
       font-weight: 300;
       text-decoration: none;
       color: $dark-color;
+      
+      @media (max-width: $midlow-width) {
+        margin-left: 4px;
+        font-size: 15px;
+      }
     }
+
+    @media (max-width: $midlow-width) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $midlow-width) {
+    margin: auto;
   }
 }
 
 .content {
   flex: 1;
   display: flex;
-	flex-direction: column;
+  flex-direction: column;
+  margin-top: 72px;
 }
 
 
 .headline {
   align-self: flex-end;
+  max-width: 100%;
+  h1 {
+    @media (max-width: $mid-width) {
+      font-size: 32px;
+    }
+
+  }
+
+  canvas {
+    max-width: 100%;
+  }
+
+  @media (max-width: $midlow-width) {
+    padding: 16px;
+  }
 }
 
-#line_canvas {
-
-}
 
 /**
 PROJECT
@@ -106,7 +163,11 @@ li.project_item {
   width: 100%;
   padding: 16px;
   margin-bottom: 8px;
-  border: 2px solid $gray-color;
+
+  @media (max-width: $midlow-width) {
+    width: auto;
+    display: block;
+  }
 
   img {
     width: 128px;
@@ -115,6 +176,11 @@ li.project_item {
     flex: 0 0 128px;
     border: 2px solid $gray-color;
 
+    @media (max-width: $midlow-width) {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
   }
 
@@ -126,23 +192,43 @@ li.project_item {
       width: 100%;
       justify-content: space-between;
       height: 40px;
-
+      @media (max-width: $max-width) {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
   
-      h2 {
+      h3 {
         margin: 0;
-        font-weight: lighter;
-        text-transform: uppercase;
-        color: $dark-color;
+        @media (max-width: $max-width) {
+          display: block;
+          width: 100%;
+        }
+        @media (max-width: $midlow-width) {
+          margin: 16px 0;
+        }
       }
   
       p.project_status {
         color: $dark-color;
         display: flex;
+        @media (max-width: $max-width) {
+          display: block;
+          width: 100%;
+          margin: 4px 0;
+
+        }
       }
     }
 
     ul.project_tags {
       padding-left: 0;
+      @media (max-width: $midlow-width) {
+        display: block;
+        width: 100%;
+        margin: 16px 0;
+
+      }
       li {
         display: inline-block;
         padding: 4px 8px;
@@ -150,11 +236,22 @@ li.project_item {
         color: #fff;
         margin-right: 4px;
         border: solid 2px $gray-color;
+        margin-top: 4px;
+
       }
     }
   }
 
-
+  @media (max-width: $midlow-width) {
+    &:after {
+      width: 144px;
+      height: 30px;
+      display: block;
+      margin: auto;
+      content: "";
+      border-bottom: 2px solid #444;
+    }
+  }
 
 
 }
@@ -164,6 +261,13 @@ RESUME
 */
 
 .resume_section {
+  ul {
+    
+    @media (max-width: $midlow-width) {
+      padding-left: 0;
+    }
+  }
+
   li.record_inline {
     display: inline-block;
     padding: 4px 8px;
@@ -179,31 +283,57 @@ RESUME
   li.record_block {
     list-style-type: none;
 
+
     .head {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: $midlow-width) {
+          width: 100%;
+          display: block;
+        }
+
       .left {
         width: 400px;
-        margin: 10px;
+        margin: 10px 0;
         font-weight: bold;
+        @media (max-width: $midlow-width) {
+          width: 100%;
+          display: block;
+          margin: 4px 0;
+        }
       }
   
       .right {
         width: 300px;
-        margin: 10px;
+        margin: 10px 0;
+        text-align: right;
+        font-style: italic;
+        @media (max-width: $midlow-width) {
+          width: 100%;
+          display: block;
+          text-align: left;
+          margin: 4px 0;
+          font-size: 0.85em;
+        }
       }
     }
 
     p.record_subtext {
-      margin: 0 10px;
+      margin: 0;
       font-size: 0.8em;
     }
 
-    ul.li {
-      list-style-type: disc;
-      display: block;
-      font-size: 0.8em;
+    ul.record_subitems {
+      @media (max-width: $midlow-width) {
+        padding-left: 32px;
+      }
+
+      .li {
+        list-style-type: disc;
+        display: block;
+        font-size: 0.7em;
+      }
     }
   }
 }
@@ -225,7 +355,7 @@ CONTACT
 form.contact_form {
 
   .form_group {
-    padding: 16px 0;
+    padding: 16px 0; 
 
     label {
       display: block;
@@ -239,7 +369,8 @@ form.contact_form {
     }
 
     textarea {
-      width: 480px;
+      max-width: 480px;
+      width: 100%;
       resize: none;
       height: 240px;
     }

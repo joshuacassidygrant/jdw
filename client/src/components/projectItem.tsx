@@ -16,7 +16,7 @@ export default class ProjectItem extends Component<ProjectItemProps> {
                 <img src={this.props.project.project_image} alt={this.props.project.project_title}/>
                 <div>
                     <div className="project_header">
-                        <h2>{this.props.project.project_title} ({this.props.project.project_year}) </h2>
+                        <h3>{this.props.project.project_title} ({this.props.project.project_year}) </h3>
                         <p className="project_status">{this.props.project.project_status}</p>
                     </div>
                     <ul className="project_tags">
