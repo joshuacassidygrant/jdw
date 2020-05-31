@@ -16,8 +16,8 @@ import ComingSoon from './pages/coming';
 
 const App = () => (
   <Router>
+        <Nav/>
         <Shell>
-          <Nav/>
           <div className="content">
             <Switch>
               <Route path="/resume">
