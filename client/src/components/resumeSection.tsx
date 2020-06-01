@@ -20,10 +20,15 @@ interface ResumeSectionProps {
 export default class ResumeSection extends Component<ResumeSectionProps, ResumeSectionState> {
 
     componentDidMount = () => {
+        console.log(API_URL);
         fetch(API_URL + 'resume/' + this.props.type + '/'  + this.props.subtype)
             .then(res => res.json())
-            .then(records => this.setState({records}));
-            // TODO: only get records that are relevant to type/subtype
+            .then(res => {
+                let records:ResumeRecord[] = res
+                .sort((x: ResumeRecord, y: ResumeRecord) => x.record_relevance as number - (y.record_relevance as number))
+                .sort((x: ResumeRecord, y: ResumeRecord) => x.record_priority as number - (y.record_priority as number))
+                this.setState({records})
+            });
     }
 
     render() {

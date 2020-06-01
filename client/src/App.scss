@@ -58,6 +58,8 @@ h1 {
   display: flex;
   flex-direction: column;
   width: $max-width;
+  overflow-y: auto;
+  padding-right: 32px;
 
   @media (max-width: $max-width) {
     width: $mid-width;
@@ -234,7 +236,6 @@ li.project_item {
         background-color: $dark-color;
         color: #fff;
         margin-right: 4px;
-        border: solid 2px $gray-color;
         margin-top: 4px;
 
       }
@@ -256,34 +257,43 @@ li.project_item {
 
 }
 
-ul.filter_list {
-  padding-left: 0;
-    @media (max-width: $midlow-width) {
-      display: block;
-      width: 100%;
-      margin: 16px 0;
+.filter_box {
 
-    }
-    li {
-      display: inline-block;
-      padding: 4px 8px;
-      background-color: $dark-color;
-      color: #fff;
-      margin-right: 4px;
-      border: solid 2px $gray-color;
-      margin-top: 4px;
-      cursor: pointer;
-
-      &.inactive {
-        background-color: $gray-color;
+  ul.filter_list {
+    padding-left: 0;
+      @media (max-width: $midlow-width) {
+        display: block;
+        width: 100%;
+        margin: 16px 0;
+  
       }
-    }
+      li {
+        display: inline-block;
+        padding: 4px 8px;
+        background-color: $dark-color;
+        color: #fff;
+        margin-right: 4px;
+        border: solid 2px $gray-color;
+        margin-top: 4px;
+        cursor: pointer;
+  
+        &.inactive {
+          background-color: $gray-color;
+        }
+      }
+  }
 }
+
+
 
 /**
 RESUME
 */
-
+.resume {
+  h2 {
+    margin-top: 32px;
+  }
+}
 .resume_section {
   ul {
     
@@ -312,14 +322,14 @@ RESUME
         display: flex;
         justify-content: space-between;
 
+
         @media (max-width: $midlow-width) {
           width: 100%;
           display: block;
         }
 
       .left {
-        width: 400px;
-        margin: 10px 0;
+        margin: 16px 0 0 0;
         font-weight: bold;
         @media (max-width: $midlow-width) {
           width: 100%;
@@ -330,7 +340,7 @@ RESUME
   
       .right {
         width: 300px;
-        margin: 10px 0;
+        margin: 16px 0 0 0;
         text-align: right;
         font-style: italic;
         @media (max-width: $midlow-width) {
@@ -345,7 +355,7 @@ RESUME
 
     p.record_subtext {
       margin: 0;
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
 
     ul.record_subitems {
@@ -353,10 +363,10 @@ RESUME
         padding-left: 32px;
       }
 
-      .li {
+      li {
         list-style-type: disc;
-        display: block;
-        font-size: 0.7em;
+        font-size: 0.9em;
+        margin-bottom: 4px;
       }
     }
   }
