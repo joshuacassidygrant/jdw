@@ -12,14 +12,13 @@ var path = require('path');
 //const creds = require('./creds');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
-const dbName = process.env.MONGODB_NAME ||  'jdw';
-const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
+const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/jdw';
 
 app.use(cors());
 app.use(bodyParser.json());
 
 
-mongoose.connect(`${url}/${dbName}`, { useNewUrlParser: true });
+mongoose.connect(`${url}`, { useNewUrlParser: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
