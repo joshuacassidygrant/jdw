@@ -1,0 +1,407 @@
+[{
+  "_id": {
+    "$oid": "5eb4ada9b835cb4c3024f398"
+  },
+  "record_subtype": "language",
+  "record_title": "C#",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5eb5fe0fb71ca456bc71c219"
+  },
+  "record_subtype": "tech",
+  "record_title": "Agile Developer Co-op at SAP Labs Vancouver",
+  "record_date": "Sept 2018 to May 2019",
+  "record_text": "",
+  "record_priority": 117,
+  "record_type": "work",
+  "record_subitems": [
+    "Developed frontend and backend (Node.js) code for SAP’s Analytics Cloud software",
+    "Enhanced a Java RESTful API microservice for user information and file permission management",
+    "Wrote, planned and ran automatic and manual tests, ultimately identifying and logging over 40 significant bugs",
+    "Ran daily stand-up meetings, tracked work and kept my team on track in my role as scrum master"
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5eb5fe31b71ca456bc71c21a"
+  },
+  "record_subtype": "language",
+  "record_title": "Java",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5eb65020b71ca456bc71c21b"
+  },
+  "record_subtype": "technology",
+  "record_title": "Adobe Illustrator",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5eb8dbddb71ca456bc71c21c"
+  },
+  "record_subtype": "",
+  "record_title": "Bachelor of Computer Science from UBC",
+  "record_date": "Sept 2018 to Aug 2020",
+  "record_text": "Pursued upper-level courses in AI, Machine Learning, Cognitive Science and Software Engineering",
+  "record_priority": "1",
+  "record_type": "education",
+  "record_subitems": [],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5eb8dd42b71ca456bc71c21d"
+  },
+  "record_subtype": "language",
+  "record_title": "Python",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed513fa3750b23e38722194"
+  },
+  "record_subtype": "language",
+  "record_title": "JavaScript",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed5144e3750b23e38722195"
+  },
+  "record_subtype": "language",
+  "record_title": "C++",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed514863750b23e38722196"
+  },
+  "record_subtype": "general",
+  "record_title": "Agile Processes",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed5150e3750b23e38722197"
+  },
+  "record_subtype": "technology",
+  "record_title": "MySQL",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed5151e3750b23e38722198"
+  },
+  "record_subtype": "technology",
+  "record_title": "NoSQL",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed515413750b23e38722199"
+  },
+  "record_subtype": "general",
+  "record_title": "Game Design",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed515903750b23e3872219a"
+  },
+  "record_subtype": "language",
+  "record_title": "PHP",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed515a43750b23e3872219b"
+  },
+  "record_subtype": "language",
+  "record_title": "CSS",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed515fb3750b23e3872219c"
+  },
+  "record_subtype": "general",
+  "record_title": "Substantive & Stylistic Editing",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed516043750b23e3872219d"
+  },
+  "record_subtype": "general",
+  "record_title": "Technical Writing",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed516573750b23e3872219e"
+  },
+  "record_subtype": "technology",
+  "record_title": "NodeJS",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed516633750b23e3872219f"
+  },
+  "record_subtype": "technology",
+  "record_title": "ReactJS",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 2
+},{
+  "_id": {
+    "$oid": "5ed516953750b23e387221a0"
+  },
+  "record_subtype": "technology",
+  "record_title": "Web Development",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed516a83750b23e387221a1"
+  },
+  "record_subtype": "technology",
+  "record_title": "Unity3D",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed516f13750b23e387221a2"
+  },
+  "record_subtype": "general",
+  "record_title": "Communication & Teamwork",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed517463750b23e387221a3"
+  },
+  "record_subtype": "technology",
+  "record_title": "Visual Studio",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed517503750b23e387221a4"
+  },
+  "record_subtype": "technology",
+  "record_title": "IntelliJ",
+  "record_date": "null",
+  "record_text": "null",
+  "record_priority": "1",
+  "record_type": "skill",
+  "record_subitems": "null",
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed519df3750b23e387221a5"
+  },
+  "record_subtype": "tech",
+  "record_title": "Game Designer & Developer at SimuThink/Coder Commonwealth",
+  "record_date": "Feb 2018 to Sept 2018",
+  "record_text": "",
+  "record_priority": 120,
+  "record_type": "work",
+  "record_subitems": [
+    "Designed and developed original simulation games and custom visual analytics software in Unity and C#",
+    "Implemented processes to improve development process, including dependency injection and unit testing"
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed51c753750b23e387221a6"
+  },
+  "record_subtype": "tech",
+  "record_title": "Web Developer & Copywriter at Kyosei Creative",
+  "record_date": "May 2014 to Sept 2017",
+  "record_text": "",
+  "record_priority": 125,
+  "record_type": "work",
+  "record_subitems": [
+    "Developed customized PHP/WordPress solutions for eCommerce, eLearning and business automation",
+    "Built WordPress websites for small business, professional and pseudo-governmental clients",
+    "Provided copywriting and editing services",
+    "Helped develop training materials for small business owners"
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed51ce33750b23e387221a7"
+  },
+  "record_subtype": "tech",
+  "record_title": "Computer Science Teaching Assistant at UBC",
+  "record_date": "May 2020 to Aug 2020",
+  "record_text": "",
+  "record_priority": 115,
+  "record_type": "work",
+  "record_subitems": [
+    "Helped UBC students learn and apply the basics of JavaScript, React, Redux, MongoDB to deploy applications to Heroku",
+    "Provided design feedback and code review for student projects."
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed51e433750b23e387221a8"
+  },
+  "record_subtype": "tech",
+  "record_title": "Freelance Developer and Editor",
+  "record_date": "May 2013 to Present",
+  "record_text": "",
+  "record_priority": 100,
+  "record_type": "work",
+  "record_subitems": [
+    "Provided editing services for documents on subjects including mining, paramedic training, business and technology",
+    "Designed, developed and maintained small websites"
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed51f023750b23e387221a9"
+  },
+  "record_subtype": "tech",
+  "record_title": "Web Editor at EVENT Magazine",
+  "record_date": "Sept 2013 to Present",
+  "record_text": "",
+  "record_priority": 145,
+  "record_type": "work",
+  "record_subitems": [
+    "Helped with technical and design tasks for website revamps ",
+    "Provided ongoing support for managing new site content"
+  ],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed5201e3750b23e387221aa"
+  },
+  "record_subtype": "",
+  "record_title": "Diploma in Professional Writing from Douglas College",
+  "record_date": "Sept 2012 to June 2014",
+  "record_text": "With a focus in substantive editing and technical writing.",
+  "record_priority": "1",
+  "record_type": "education",
+  "record_subitems": [],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed520493750b23e387221ab"
+  },
+  "record_subtype": "",
+  "record_title": "Bachelor of Arts in English from SFU",
+  "record_date": "Sept 2009 to June 2011",
+  "record_text": "With a focus on contemporary and conceptual literature.",
+  "record_priority": "1",
+  "record_type": "education",
+  "record_subitems": [],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed520633750b23e387221ac"
+  },
+  "record_subtype": "",
+  "record_title": "Associate of Arts from Kwantlen Polytechnic University",
+  "record_date": "Jan 2008 to Aug 2009",
+  "record_text": "",
+  "record_priority": "1",
+  "record_type": "education",
+  "record_subitems": [],
+  "record_relevance": 1
+},{
+  "_id": {
+    "$oid": "5ed520e33750b23e387221ad"
+  },
+  "record_subtype": "",
+  "record_title": "Katimavik Youth Program Participant",
+  "record_date": "Nov 2007 to Aug 2008",
+  "record_text": "",
+  "record_priority": "1",
+  "record_type": "education",
+  "record_subitems": [],
+  "record_relevance": 1
+}]

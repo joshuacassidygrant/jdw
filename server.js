@@ -13,7 +13,7 @@ var path = require('path');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
 const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/jdw';
-
+console.log(url);
 app.use(cors());
 app.use(bodyParser.json());
 

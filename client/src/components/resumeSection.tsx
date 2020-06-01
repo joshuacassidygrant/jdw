@@ -20,7 +20,6 @@ interface ResumeSectionProps {
 export default class ResumeSection extends Component<ResumeSectionProps, ResumeSectionState> {
 
     componentDidMount = () => {
-        console.log(API_URL);
         fetch(API_URL + 'resume/' + this.props.type + '/'  + this.props.subtype)
             .then(res => res.json())
             .then(res => {

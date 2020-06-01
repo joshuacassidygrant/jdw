@@ -237,6 +237,8 @@ li.project_item {
         color: #fff;
         margin-right: 4px;
         margin-top: 4px;
+        clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+
 
       }
     }
@@ -292,6 +294,18 @@ RESUME
 .resume {
   h2 {
     margin-top: 32px;
+    padding: 8px 16px;
+    background-image: url('/dark-honeycomb.png');
+    color: #fff;
+    clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
+    max-width: 440px;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+
+    &:hover {
+      clip-path: polygon(100% 0, 90% 0%, 100% 100%, 0 100%, 0 0);
+
+    }
+
   }
 }
 .resume_section {
@@ -308,6 +322,8 @@ RESUME
     background-color: $dark-color;
     color: #fff;
     margin: 4px;
+    clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+
   }
 
   li.record_inline.relevance_2 {
