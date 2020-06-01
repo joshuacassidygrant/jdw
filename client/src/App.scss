@@ -21,12 +21,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   justify-content: center;
-  background-image: url('/subtle_dots.png');
+  background-image: url('/patterns/subtle_dots.png');
 
   a {
     color: $dark-color;
     font-weight: bold;
-    border-bottom: 2px solid $dark-color;
     text-decoration: none;
     transition: all 0.5s;
 
@@ -34,7 +33,6 @@ body {
 
   a:hover {
     color: $gray-color; 
-    border-bottom: 2px solid $gray-color;
 
   }
 
@@ -77,9 +75,20 @@ h1 {
     width: 100%;
   }
 
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
 
 
+  &::-webkit-scrollbar-thumb {
+    background-color: $dark-color;
+    border: 1px solid $gray-color;
+  }
 
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(196,196,196,0.7);
+    background-color: #F5F5F5;
+  }
 }
 
 
@@ -104,9 +113,10 @@ h1 {
     display: inline-block;
     a {
       margin: 0 16px;
-      font-weight: 300;
+      font-weight: 600;
       text-decoration: none;
       color: $dark-color;
+      border-bottom: 2px solid $dark-color;
       
       @media (max-width: $midlow-width) {
         margin-left: 4px;
@@ -120,13 +130,18 @@ h1 {
       text-align: center;
     }
   }
-
+  @media (max-width: $midlow-width) {
+    height: 64px;
+    padding-bottom: 16px;
+  }
 }
 
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
+
+
 }
 
 
@@ -295,7 +310,7 @@ RESUME
   h2 {
     margin-top: 32px;
     padding: 8px 16px;
-    background-image: url('/dark-honeycomb.png');
+    background-image: url('/patterns/dark-honeycomb.png');
     color: #fff;
     clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
     max-width: 440px;

@@ -1,0 +1,193 @@
+[{
+  "_id": {
+    "$oid": "5ebcdc090c5e5644d48b4e79"
+  },
+  "project_type": "Game Development",
+  "project_title": "Oceans of Jupiter",
+  "project_priority": 5,
+  "project_year": 2018,
+  "project_month": 2,
+  "project_description": "A short undersea adventure. Made for Global Game Jam 2018",
+  "project_link": "https://globalgamejam.org/2018/games/oceans-jupiter",
+  "project_image": "/images/oceansofjupiter.jpg",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D"
+  ]
+},{
+  "_id": {
+    "$oid": "5ebf081f3750b23e38722193"
+  },
+  "project_type": "Web Development",
+  "project_title": "Vancouver Welcome Map",
+  "project_priority": 3,
+  "project_year": 2017,
+  "project_month": 12,
+  "project_description": "An online web map built to Syrian refugees new to Vancouver",
+  "project_link": "https://www.cbc.ca/news/canada/british-columbia/vancouver-welcome-map-jennifer-rae-pierce-1.3391655",
+  "project_image": "/images/welcome-map.png",
+  "project_status": "FINISHED, UNMAINTAINED",
+  "project_tags": [
+    "Web Dev",
+    "Volunteer",
+    "Maps"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed552ed5162737888710fea"
+  },
+  "project_type": "Game Development",
+  "project_title": "Unreleased Tower Building Game",
+  "project_priority": 5,
+  "project_year": 2020,
+  "project_month": 2,
+  "project_description": "A fully-3d tower building simulation coming soon(ish) from SimuThink. I provided early design and development.",
+  "project_link": "http://www.simuthink.com/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "IN DEVELOPMENT",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D",
+    "Design"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed559245162737888710feb"
+  },
+  "project_type": "Web Development",
+  "project_title": "faq.life",
+  "project_priority": 5,
+  "project_year": 2015,
+  "project_month": 1,
+  "project_description": "A PHP-based text generation engine for answering religious questions and generating inspirational posters using Markov chains.",
+  "project_link": "http://www.faq.life/",
+  "project_image": "/images/faqlife.png",
+  "project_status": "FINISHED, UNMAINTAINED",
+  "project_tags": [
+    "Web Dev",
+    "Art"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed55b705162737888710fec"
+  },
+  "project_type": "Research",
+  "project_title": "New Westminster Cultural Map",
+  "project_priority": 5,
+  "project_year": 2014,
+  "project_month": 1,
+  "project_description": "I was a research assistant for the New Westminster Cultural Map.",
+  "project_link": "http://www.newwestculturalmap.ca/",
+  "project_image": "/images/nwculturalmap.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Research",
+    "Art",
+    "Maps"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed55c775162737888710fed"
+  },
+  "project_type": "Research",
+  "project_title": "Panel Presenter at 2013 AWP ",
+  "project_priority": 5,
+  "project_year": 2013,
+  "project_month": 3,
+  "project_description": "I presented on a panel on pedagogy with first books of contemporary poetry.",
+  "project_link": "https://www.awpwriter.org/awp_conference/archive/2013/fri",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Research",
+    "Art",
+    "Writing"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed55d235162737888710fee"
+  },
+  "project_type": "Game Development",
+  "project_title": "Tofu3D ",
+  "project_priority": 1,
+  "project_year": 2019,
+  "project_month": 3,
+  "project_description": "A Unity3D framework for making games with a more strict object oriented approach, optimized for better unit testing.",
+  "project_link": "https://github.com/joshuacassidygrant/tofu3d",
+  "project_image": "/images/TOFULogoSmall.png",
+  "project_status": "IN DEVELOPMENT",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D",
+    "Tools Dev"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed560225162737888710fef"
+  },
+  "project_type": "Web Development",
+  "project_title": "UbHub ",
+  "project_priority": 3,
+  "project_year": 2018,
+  "project_month": 1,
+  "project_description": "An online resource hub for urban biodiversity initiatives. I helped to develop the forum and map functionalities.",
+  "project_link": "https://www.ubhub.org/",
+  "project_image": "/images/ubhub.png",
+  "project_status": "NOT CURRENTLY CONTRIBUTING",
+  "project_tags": [
+    "Web Dev",
+    "Volunteer"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed562a05162737888710ff0"
+  },
+  "project_type": "Web Development",
+  "project_title": "Lanterns at Guantánamo ",
+  "project_priority": 3,
+  "project_year": 2018,
+  "project_month": 1,
+  "project_description": "I designed and developed an archive website detailing poet Jordan Scott's media tour of the US facility at Guantánamo Bay",
+  "project_link": "https://lanternsatguantanamo.ca/",
+  "project_image": "/images/lanterns.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Web Dev",
+    "Design"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed57dce5162737888710ff1"
+  },
+  "project_type": "Other Development",
+  "project_title": "mz: A Music DSL ",
+  "project_priority": 4,
+  "project_year": 2020,
+  "project_month": 5,
+  "project_description": "My team designed a small DSL that uses Python to translate simplified input into sheet music and midi.",
+  "project_link": "https://github.com/joshuacassidygrant/410musicdsl/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Tools Dev",
+    "Design"
+  ]
+},{
+  "_id": {
+    "$oid": "5ed57f155162737888710ff2"
+  },
+  "project_type": "Writing & Editing",
+  "project_title": "Paramedic Training Simulations & Manual ",
+  "project_priority": 4,
+  "project_year": 2015,
+  "project_month": 1,
+  "project_description": "Me and a small team edited the JIBC's manual for paramedic training using immersive simulations, and also worked on over 100 simulation scenarios.",
+  "project_link": "https://www.jibc.ca/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Writing",
+    "Editing"
+  ]
+}]

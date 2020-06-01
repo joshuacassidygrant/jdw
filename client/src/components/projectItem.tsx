@@ -7,13 +7,13 @@ interface ProjectItemProps {
 
 export default class ProjectItem extends Component<ProjectItemProps> {
 
-    // <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">LINK</a>
-
 
     render() {
         return (
             <li className="project_item">
-                <img src={this.props.project.project_image} alt={this.props.project.project_title}/>
+                <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">
+                    <img src={this.props.project.project_image} alt={this.props.project.project_title}/>
+                </a>
                 <div>
                     <div className="project_header">
                         <h3>{this.props.project.project_title} ({this.props.project.project_year}) </h3>
@@ -27,7 +27,8 @@ export default class ProjectItem extends Component<ProjectItemProps> {
                         })}
                     </ul>
                     <div>
-                        <p>{this.props.project.project_description}</p>
+                        <p>{this.props.project.project_description} <a href={this.props.project.project_link} rel="noopener noreferrer" target="_blank">LINK</a></p>
+                        
                     </div>
                 </div>
             </li>
