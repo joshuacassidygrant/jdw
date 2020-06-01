@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import { API_URL } from '../config';
 import Project from '../data/Project';
 import ProjectItem from './projectItem';
+import FilterBox from './filterBox';
 
 interface ProjectListState {
-    projects: Project[]
+    projects: Project[],
+    currentFilter: string,
+    tags: Set<string>
 }
 
 interface ProjectListProps {
@@ -17,20 +20,36 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
         fetch(API_URL + 'projects/')
             .then(res => res.json())
             .then(projects => {
-                this.setState({projects});
+                this.setState({projects, currentFilter: "", tags: new Set(projects.flatMap((p: any) => p.project_tags))});
+
             });
+    }
+
+    changeFilter(currentFilter: string) {
+        this.setState({currentFilter})
     }
 
     render() {
         if (this.state == null) {
             return ("...");
         }
+
+        let projects = [];
+        if (this.state.currentFilter === "") {
+            projects = this.state.projects;
+        } else {
+            projects = this.state.projects.filter(p => p.project_tags.includes(this.state.currentFilter));
+        }
+
         return (
-            <ul className="project_list">
-                 {this.state.projects.map((project, index) => {
-                    return <ProjectItem project={project} />
-                 })}
-            </ul>
+            <div>
+                <FilterBox currentFilter={this.state.currentFilter} changeFilter={this.changeFilter.bind(this)} tagList={this.state.tags} />
+                <ul className="project_list">
+                    {projects.map((project, index) => {
+                        return <ProjectItem key={index} project={project} />
+                    })}
+                </ul>
+            </div>
                
         );
     }

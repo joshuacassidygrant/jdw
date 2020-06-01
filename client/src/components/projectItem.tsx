@@ -22,7 +22,7 @@ export default class ProjectItem extends Component<ProjectItemProps> {
                     <ul className="project_tags">
                         {this.props.project.project_tags.map((tag, index) => {
                             return (
-                                <li>{tag}</li>
+                                <li key={tag}>{tag}</li>
                             )
                         })}
                     </ul>

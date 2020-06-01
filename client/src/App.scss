@@ -241,6 +241,7 @@ li.project_item {
     }
   }
 
+
   @media (max-width: $midlow-width) {
     &:after {
       width: 144px;
@@ -253,6 +254,30 @@ li.project_item {
   }
 
 
+}
+
+ul.filter_list {
+  padding-left: 0;
+    @media (max-width: $midlow-width) {
+      display: block;
+      width: 100%;
+      margin: 16px 0;
+
+    }
+    li {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: $dark-color;
+      color: #fff;
+      margin-right: 4px;
+      border: solid 2px $gray-color;
+      margin-top: 4px;
+      cursor: pointer;
+
+      &.inactive {
+        background-color: $gray-color;
+      }
+    }
 }
 
 /**
