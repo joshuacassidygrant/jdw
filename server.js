@@ -34,6 +34,8 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
+
+
 const api = express.Router();
 app.use("/api", api);
 
@@ -95,6 +97,10 @@ api.route('/send').post((req, res) => {
       }
     })
   })
+
+  app.get('*', function (req, res) {
+    response.sendFile(path.resolve(__dirname, 'index.html'));
+  }); 
   
 
   let transport = {
