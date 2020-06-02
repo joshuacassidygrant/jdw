@@ -98,8 +98,8 @@ api.route('/send').post((req, res) => {
     })
   })
 
-  app.get('*', function (req, res) {
-    response.sendFile(path.resolve(__dirname, 'index.html'));
+  app.get('/*', function (req, res) {
+    response.sendFile(path.resolve(__dirname, 'client/index.html'));
   }); 
   
 
