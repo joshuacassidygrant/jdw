@@ -1,21 +1,23 @@
 import React from 'react';
+import { createBrowserHistory } from "history";
 import './App.scss';
 import Nav from './components/nav';
 import Shell from './components/shell';
 import Headline from './pages/headline';
 import {
-  BrowserRouter as Router,
+  Router,
   Switch,
-  Route,
+  Route
 } from 'react-router-dom';
 import Resume from './pages/resume';
 import Contact from './pages/contact';
 import Projects from './pages/projects';
 import ComingSoon from './pages/coming';
 
+const bHistory = createBrowserHistory();
 
 const App = () => (
-  <Router>
+  <Router history={bHistory} >
         <Nav/>
         <Shell>
           <div className="content">

@@ -196,7 +196,8 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
             if (cel != null) {
                 c2d.beginPath();
                 c2d.fillStyle = cel.v.color;
-                c2d.rect(cel.x * this.props.grain, cel.y * this.props.grain, this.props.grain, this.props.grain);
+                //c2d.rect(cel.x * this.props.grain, cel.y * this.props.grain, this.props.grain, this.props.grain);
+                c2d.ellipse(cel.x * this.props.grain, cel.y * this.props.grain, this.props.grain - 2, this.props.grain - 2, Math.PI / 4, 0, 2 * Math.PI);
                 c2d.fill();
             }
         });

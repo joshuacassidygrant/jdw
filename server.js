@@ -34,13 +34,12 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
-const routes = express.Router();
-app.use("/api", routes);
+const api = express.Router();
+app.use("/api", api);
 
 
 
-
-routes.route('/projects/').get((req, res) => {
+api.route('/projects/').get((req, res) => {
     Project.find((err, projects) => {
         if (err) {
             console.log(err);
@@ -50,7 +49,7 @@ routes.route('/projects/').get((req, res) => {
     });
 });
 
-routes.route('/resume/:type').get((req, res) => {
+api.route('/resume/:type').get((req, res) => {
     ResumeRecord.find((err, records) => {
         if (err) {
             console.log(err);
@@ -60,7 +59,7 @@ routes.route('/resume/:type').get((req, res) => {
     });
 });
 
-routes.route('/resume/:type/:subtype').get((req, res) => {
+api.route('/resume/:type/:subtype').get((req, res) => {
     ResumeRecord.find((err, records) => {
         if (err) {
             console.log(err);
@@ -71,7 +70,7 @@ routes.route('/resume/:type/:subtype').get((req, res) => {
 });
 
 
-routes.route('/send').post((req, res) => {
+api.route('/send').post((req, res) => {
     var name = req.body.name
     var email = req.body.email
     var message = req.body.message
