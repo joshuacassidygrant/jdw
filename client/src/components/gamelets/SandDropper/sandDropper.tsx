@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import CellType from './cellType';
+import Cell from './cell';
+import CellMap from './cellMap';
 
 interface SandDropperProps {
     frequency: number,
@@ -15,36 +18,9 @@ interface SandDropperState {
     renderHeight: number,
     renderWidth: number,
     cells: Cell[],
-    cellMap: (Cell|null)[][],
-    currentCellType: CellType
+    cellMap: CellMap,
+    currentCellTypeIndex: number
 }
-
-class Cell {
-    x: number;
-    y: number;
-    v: CellType;
-
-    constructor(x: number, y: number, v: CellType) {
-        this.x = x;
-        this.y = y;
-        this.v = v;
-    }
-}
-
-class CellType {
-    name: string;
-    color: string;    
-
-    constructor(name: string, color: string) {
-        this.name = name;
-        this.color = color;
-    }
-}
-
-let BlueSand = new CellType ("Blue Sand", "#4444EE");
-let RedSand =  new CellType ("Red Sand", "#EE4444");
-
-
 
 export default class SandDropper extends Component<SandDropperProps, SandDropperState> {
 
@@ -65,8 +41,8 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
             renderHeight: 0,
             renderWidth: 0,
             cells: [],
-            cellMap: [],
-            currentCellType: BlueSand
+            cellMap: new CellMap(0, 0),
+            currentCellTypeIndex: 0
         }
         this.canvas = null;
         this.c2d = null;
@@ -102,10 +78,10 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     reset() {
         this.setState({
             ms: 0,
-            mx: 0,
-            my: 0,
+            mx: -1,
+            my: -1,
             cells: [],
-            cellMap: Array(this.state.width).fill(null).map(a => Array(this.props.grain).fill(null))
+            cellMap: new CellMap(this.state.width, this.state.height)
         });
     }
 
@@ -119,23 +95,16 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
         if (this.canvas === null || this.state.cells === [] || this.state.cells === undefined) {
             this.updateDimensions();
         }
-                
-        let mx = this.state.mx;
-        let my = this.state.my;
+        
         let cells = this.state.cells;
         let cellMap = this.state.cellMap;
 
-        
-        if (this.inBounds(mx, my)) {
-            let cell: Cell = new Cell(mx, my, this.state.currentCellType);
-            cellMap[mx][my] = cell;
-            cells.push(cell);
+        let newCell = cellMap.spawnNewCellAtMouse(cells, CellType.types[this.state.currentCellTypeIndex], this.state.mx, this.state.my);
+        if (newCell != null) {
+            cells.push(newCell);
         }
 
-        cells.forEach(cel => {
-            this.fall(cel, cellMap);
-        })
-
+        this.updateAllCells(cells, cellMap);
 
         this.setState({
             cells,
@@ -148,36 +117,25 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
         } 
     }
 
-    fall(cel: Cell, cellMap: (Cell|null)[][]) {
-        if (cel.y === cellMap[0].length - 1) return;
+
+    updateAllCells(cells: Cell[], cellMap:CellMap) {
+        cells.forEach(cel => {
+            cel.v.fall(cel, cellMap);
+        })
+    }
+
+
+    fall(cel: Cell, cellMap: CellMap) {
+        //if (cel.y === cellMap[0].length - 1) return;
         let y = cel.y + 1;
         let x = cel.x;
-        if (this.moveCell(cel, x, y, cellMap)) return; 
+        if (cellMap.moveCell(cel, x, y)) return; 
         x -= 1;
-        if (this.moveCell(cel, x, y, cellMap)) return; 
+        if (cellMap.moveCell(cel, x, y)) return; 
         x += 2;
-        if (this.moveCell(cel, x, y, cellMap)) return; 
+        if (cellMap.moveCell(cel, x, y)) return; 
     }
 
-    moveCell(cel: Cell, x: number, y:number, cellMap: (Cell|null)[][]): boolean {
-        if(!this.inBounds(x, y)) return false;
-
-        if (cellMap[x][y] == null) {
-            cellMap[cel.x][cel.y] = null;
-            cel.y = y;
-            cel.x = x;
-            cellMap[x][y] = cel;   
-            return true;
-        }
-        return false;
-    }
-    
-    inBounds(x: number, y:number) {
-        return (x < this.state.width
-            && x >= 0
-            && y < this.state.height
-            && y >= 0);
-    }
 
     render() {
         return (
@@ -189,7 +147,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     
     renderCanvas() {
         return (
-            <canvas onMouseMove={this.updateMouse} onClick={this.nextCellType} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
+            <canvas onMouseMove={this.updateMouse} onMouseLeave={this.mouseLeave} onClick={this.nextCellType} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
                 this.canvas = x;
                 if (x == null) return;
                 this.c2d = x.getContext("2d");
@@ -215,16 +173,18 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
 
     }
 
+    mouseLeave = (event: any) => {
+        this.setState((state) => {
+            return {            
+                mx:-1,
+                my:-1
+            }
+        }); 
+    }
+
     nextCellType = (event: any) => {
-        let nextType: CellType = BlueSand;
-        if (this.state.currentCellType === RedSand) {
-            nextType = BlueSand;
-        } else {
-            nextType = RedSand;
-        }
         this.setState({
-            currentCellType: nextType
-        })
+            currentCellTypeIndex: (this.state.currentCellTypeIndex + 1) % CellType.types.length});
     }
 
     draw() {
