@@ -222,7 +222,6 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
         } else {
             nextType = RedSand;
         }
-        console.log(nextType);
         this.setState({
             currentCellType: nextType
         })
