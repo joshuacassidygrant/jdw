@@ -15,7 +15,8 @@ interface SandDropperState {
     renderHeight: number,
     renderWidth: number,
     cells: Cell[],
-    cellMap: (Cell|null)[][]
+    cellMap: (Cell|null)[][],
+    currentCellType: CellType
 }
 
 class Cell {
@@ -30,13 +31,20 @@ class Cell {
     }
 }
 
-function clamp(num: number, min: number, max: number) {
-    return num <= min ? min : num >= max ? max : num;
+class CellType {
+    name: string;
+    color: string;    
+
+    constructor(name: string, color: string) {
+        this.name = name;
+        this.color = color;
+    }
 }
 
-enum CellType {
-    RedSand, YellowSand, BlueSand
-}
+let BlueSand = new CellType ("Blue Sand", "#4444EE");
+let RedSand =  new CellType ("Red Sand", "#EE4444");
+
+
 
 export default class SandDropper extends Component<SandDropperProps, SandDropperState> {
 
@@ -57,7 +65,8 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
             renderHeight: 0,
             renderWidth: 0,
             cells: [],
-            cellMap: []
+            cellMap: [],
+            currentCellType: BlueSand
         }
         this.canvas = null;
         this.c2d = null;
@@ -118,7 +127,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
 
         
         if (this.inBounds(mx, my)) {
-            let cell: Cell = new Cell(mx, my, CellType.BlueSand);
+            let cell: Cell = new Cell(mx, my, this.state.currentCellType);
             cellMap[mx][my] = cell;
             cells.push(cell);
         }
@@ -141,7 +150,6 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
 
     fall(cel: Cell, cellMap: (Cell|null)[][]) {
         if (cel.y === cellMap[0].length - 1) return;
-
         let y = cel.y + 1;
         let x = cel.x;
         if (this.moveCell(cel, x, y, cellMap)) return; 
@@ -181,7 +189,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     
     renderCanvas() {
         return (
-            <canvas onMouseMove={this.updateMouse} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
+            <canvas onMouseMove={this.updateMouse} onClick={this.nextCellType} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
                 this.canvas = x;
                 if (x == null) return;
                 this.c2d = x.getContext("2d");
@@ -207,6 +215,19 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
 
     }
 
+    nextCellType = (event: any) => {
+        let nextType: CellType = BlueSand;
+        if (this.state.currentCellType === RedSand) {
+            nextType = BlueSand;
+        } else {
+            nextType = RedSand;
+        }
+        console.log(nextType);
+        this.setState({
+            currentCellType: nextType
+        })
+    }
+
     draw() {
         if (this.c2d === null) return;
         let c2d = this.c2d as CanvasRenderingContext2D;
@@ -215,69 +236,11 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
         cells.forEach((cel) => {
             if (cel != null) {
                 c2d.beginPath();
-                c2d.fillStyle = "#2266FF";
+                c2d.fillStyle = cel.v.color;
                 c2d.rect(cel.x * this.props.grain, cel.y * this.props.grain, this.props.grain, this.props.grain);
                 c2d.fill();
             }
         });
-
-        // TODO: improve this
-
-
-
-
-        /*for (let i = 0; i < this.state.width; i = i + 1) {
-            c2d.beginPath();
-            
-            let distX = Math.abs(this.state.mx - i);
-
-            let x:number = i;
-            let y:number = Math.cos(i / 15 + this.state.ms / 100) * distX / 20 + (this.state.height / 2);
-
-            let distY = Math.abs(this.state.my - y);
-            y += distY / 10 + distX / 20;
-            y -= Math.sin(Math.pow(i, 2)) / 10;
-
-
-            c2d.rect(x, y, 1, 1);
-            c2d.fillStyle = "#2266FF";
-            c2d.fill();
-        }
-
-        for (let i = 0; i < this.state.width; i = i + 1) {
-            c2d.beginPath();
-            
-            let distX = Math.abs(this.state.mx - i);
-
-            let x:number = i;
-            let y:number = Math.cos(i / 11 + this.state.ms / 100) * distX / 15 + (this.state.height / 2);
-
-            let distY = Math.abs(this.state.my - y);
-            y += distY / 20 + distX / 50;
-            y -= Math.tan(Math.pow(i, 2)) / 10;
-
-
-            c2d.rect(x, y, 1, 1);
-            c2d.fillStyle = "#FF6622";
-            c2d.fill();
-        }
-
-
-        
-        for (let i = 0; i < this.state.width; i = i + 1) {
-            c2d.beginPath();
-
-            let distX = Math.abs(this.state.mx - i);
-
-            let x:number = i;
-            let y:number = Math.pow(Math.cos(i / 32 + this.state.ms / 100)/2, 2) * distX / 5 + (this.state.height / 2);
-            y -= Math.tan(Math.pow(i, 2)) / 10;
-
-
-            c2d.rect(x, y, 1, 1);
-            c2d.fillStyle = "#00FF22";
-            c2d.fill();
-        }*/
 
     }
 
