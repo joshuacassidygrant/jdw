@@ -10,6 +10,16 @@ $midlow-width: 640px;
 $semimin-width: 480px;
 $min-width: 320px;
 
+
+@mixin page-tag {
+  clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+  transition: all 0.25s ease-out;
+
+  &:hover {
+    clip-path: polygon(100% 0, 100% 25%, 100% 100%, 100% 100%, 0 100%, 0 0);
+  }
+}
+
 html {
   height: 100vh;
 }
@@ -242,6 +252,7 @@ li.project_item {
 
     ul.project_tags {
       padding-left: 0;
+      
       @media (max-width: $midlow-width) {
         display: block;
         width: 100%;
@@ -255,7 +266,7 @@ li.project_item {
         color: #fff;
         margin-right: 4px;
         margin-top: 4px;
-        clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+        @include page-tag;
 
 
       }
@@ -306,6 +317,7 @@ li.project_item {
 
 
 
+
 /**
 RESUME
 */
@@ -340,8 +352,13 @@ RESUME
     background-color: $dark-color;
     color: #fff;
     margin: 4px;
-    clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+    /*clip-path: polygon(100% 0, 100% 25%, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 0);
+    transition: clip-path 0.25s ease-out;
 
+    &:hover {
+      clip-path: polygon(100% 0, 100% 25%, 100% 100%, 100% 100%, 0 100%, 0 0);
+    }*/
+    @include page-tag;
   }
 
   li.record_inline.relevance_2 {

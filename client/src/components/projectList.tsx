@@ -37,14 +37,14 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
         let projects = [];
         if (this.state.currentFilter === "") {
             projects = this.state.projects;
-        } else {
+        } else {    
             projects = this.state.projects.filter(p => p.project_tags.includes(this.state.currentFilter));
         }
         projects.sort((x, y) => x.project_priority - y.project_priority);
 
         return (
             <div>
-                Check out some projects that I've executed/been involved with/contributed to:
+                Check out some other projects that I've executed/been involved with/contributed to:
                 <FilterBox currentFilter={this.state.currentFilter} changeFilter={this.changeFilter.bind(this)} tagList={this.state.tags} />
                 <ul className="project_list">
                     {projects.map((project, index) => {
