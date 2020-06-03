@@ -99,7 +99,7 @@ api.route('/send').post((req, res) => {
   })
 
   app.get('/*', function (req, res) {
-    res.sendFile(path.resolve('./client/index.html'));
+    res.sendFile(path.resolve(__dirname, 'client/build'));
   }); 
   
 
