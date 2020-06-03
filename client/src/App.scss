@@ -479,3 +479,15 @@ form.contact_form {
 
 
 }
+
+p.loading {
+  font-weight: 700;
+  animation: fade-pulse 0.63s infinite;
+  animation-direction: alternate;
+  font-color: $dark-color;
+}
+
+@keyframes fade-pulse {
+  from {opacity: 1;}
+  to {opacity: 0.3;}
+}

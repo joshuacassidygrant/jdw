@@ -30,7 +30,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
         if (this.state.status !== "") {
             return (
                 <div className="form_holder">
-                    <p className="status">{this.state.status}</p>
+                    <p className="status loading">{this.state.status}</p>
                 </div>
             )
         }

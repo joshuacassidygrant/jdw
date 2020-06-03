@@ -3,6 +3,8 @@ import { API_URL } from '../config';
 import Project from '../data/Project';
 import ProjectItem from './projectItem';
 import FilterBox from './filterBox';
+import Loading from '../components/loading';
+
 
 interface ProjectListState {
     projects: Project[],
@@ -31,7 +33,11 @@ export default class ProjectList extends Component<ProjectListProps, ProjectList
 
     render() {
         if (this.state == null) {
-            return ("...");
+            return (
+            <div>
+                <Loading />
+            </div>
+            );
         }
 
         let projects = [];

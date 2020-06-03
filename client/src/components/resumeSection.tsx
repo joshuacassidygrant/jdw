@@ -3,6 +3,7 @@ import {API_URL} from '../config';
 import ResumeRecord from '../data/ResumeRecord';
 import ResumeRecordInline from './resumeRecordInline';
 import ResumeRecordBlock from './resumeRecordBlock';
+import Loading from '../components/loading';
 
 interface ResumeSectionState {
     records: ResumeRecord[]
@@ -32,7 +33,12 @@ export default class ResumeSection extends Component<ResumeSectionProps, ResumeS
 
     render() {
         if (this.state === null || this.state.records === null) {
-            return "...";
+            return (
+                <div className="section resume_section">
+                    <h3>{this.props.title}</h3>
+                    <Loading />
+                </div>
+            );
         } else {
             return (
                 <div className="section resume_section">
