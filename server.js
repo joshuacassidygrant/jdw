@@ -75,11 +75,11 @@ api.route('/send').post((req, res) => {
     var name = req.body.name
     var email = req.body.email
     var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${content} `
+    var content = `name: ${name} \n email: ${email} \n message: ${message} `
   
     var mail = {
       from: name,
-      to: "jc.grant22@gmail.com",  //Change to email address that you want to receive messages on
+      to: "jc.grant22@gmail.com",
       subject: 'New Message from Contact Form',
       text: content
     }
@@ -97,9 +97,7 @@ api.route('/send').post((req, res) => {
     })
   })
 
-  app.get('*', function (req, res) {
-    res.sendFile(path.resolve('./client/build/index.html'));
-  }); 
+
 
   let transport = {
     host: 'smtp.gmail.com',
@@ -123,3 +121,6 @@ api.route('/send').post((req, res) => {
     });
   }
   
+  app.get('*', function (req, res) {
+    res.sendFile(path.resolve('./client/build/index.html'));
+  }); 

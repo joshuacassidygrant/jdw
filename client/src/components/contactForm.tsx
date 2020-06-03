@@ -59,6 +59,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
 
     handleSubmit(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
+        this.setState({status: "Sending..."});
 
         fetch(API_URL + "send", {
             headers: { "Content-Type": "application/json; charset=utf-8" },
@@ -69,13 +70,17 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
                 messsage: this.state.message
             })
         }).then((res) => {
+            if (res.status !== 200) {
+                throw new Error(res.statusText);
+            }
+
             this.setState(
                {status: "Thank you! I'll respond to you when I can."}
             )
             this.resetForm();
         }).catch((err) => {
             this.setState(
-                {status: "Uh oh. Something went wrong."}
+                {status: "Uh oh. Something went wrong with the form. Please contact me directly at hello at joshua dot works."}
              )
              this.resetForm();
 

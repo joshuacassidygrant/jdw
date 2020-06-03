@@ -59,6 +59,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
 
     componentWillUnmount() {
         clearInterval(this.updateInterval);
+        window.removeEventListener("resize", this.updateDimensions);
     }
 
     updateDimensions() {
@@ -70,12 +71,14 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
                 renderHeight: this.props.height,
                 height: Math.ceil(this.props.height / this.props.grain)
             });
+
+            this.reset();   
         }
 
-        this.reset();   
     }
 
     reset() {
+
         this.setState({
             ms: 0,
             mx: -1,
@@ -157,6 +160,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     }
 
     updateMouse = (event: any) => {
+
         let rect = this.rect as DOMRect;
 
         if (rect == null) return;
@@ -174,6 +178,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     }
 
     mouseLeave = (event: any) => {
+
         this.setState((state) => {
             return {            
                 mx:-1,
@@ -183,6 +188,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     }
 
     nextCellType = (event: any) => {
+
         this.setState({
             currentCellTypeIndex: (this.state.currentCellTypeIndex + 1) % CellType.types.length});
     }
