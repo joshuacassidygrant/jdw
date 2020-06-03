@@ -9,7 +9,6 @@ const cors = require('cors');
 const PORT = process.env.PORT  || 4000;
 const nodemailer = require('nodemailer');
 var path = require('path');
-//const creds = require('./creds');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
 const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/jdw';
@@ -101,7 +100,6 @@ api.route('/send').post((req, res) => {
   app.get('*', function (req, res) {
     res.sendFile(path.resolve('./client/build/index.html'));
   }); 
-  
 
   let transport = {
     host: 'smtp.gmail.com',

@@ -147,7 +147,7 @@ export default class SandDropper extends Component<SandDropperProps, SandDropper
     
     renderCanvas() {
         return (
-            <canvas onMouseMove={this.updateMouse} onMouseLeave={this.mouseLeave} onClick={this.nextCellType} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
+            <canvas className="sanddropper" onMouseMove={this.updateMouse} onMouseLeave={this.mouseLeave} onClick={this.nextCellType} width = {this.state.renderWidth} height={this.props.height} ref = {x => {
                 this.canvas = x;
                 if (x == null) return;
                 this.c2d = x.getContext("2d");

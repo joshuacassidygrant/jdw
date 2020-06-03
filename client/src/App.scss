@@ -157,6 +157,9 @@ h1 {
 
   canvas {
     max-width: 100%;
+    &.sanddropper {
+      cursor: pointer;
+    }
   }
 
   @media (max-width: $midlow-width) {

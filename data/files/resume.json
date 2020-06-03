@@ -1,407 +1,193 @@
 [{
   "_id": {
-    "$oid": "5eb4ada9b835cb4c3024f398"
+    "$oid": "5ebcdc090c5e5644d48b4e79"
   },
-  "record_subtype": "language",
-  "record_title": "C#",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
+  "project_type": "Game Development",
+  "project_title": "Oceans of Jupiter",
+  "project_priority": 5,
+  "project_year": 2018,
+  "project_month": 2,
+  "project_description": "A short undersea adventure. Made for Global Game Jam 2018",
+  "project_link": "https://globalgamejam.org/2018/games/oceans-jupiter",
+  "project_image": "/images/oceansofjupiter.jpg",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D"
+  ]
 },{
   "_id": {
-    "$oid": "5eb5fe0fb71ca456bc71c219"
+    "$oid": "5ebf081f3750b23e38722193"
   },
-  "record_subtype": "tech",
-  "record_title": "Agile Developer Co-op at SAP Labs Vancouver",
-  "record_date": "Sept 2018 to May 2019",
-  "record_text": "",
-  "record_priority": 117,
-  "record_type": "work",
-  "record_subitems": [
-    "Developed frontend and backend (Node.js) code for SAP’s Analytics Cloud software",
-    "Enhanced a Java RESTful API microservice for user information and file permission management",
-    "Wrote, planned and ran automatic and manual tests, ultimately identifying and logging over 40 significant bugs",
-    "Ran daily stand-up meetings, tracked work and kept my team on track in my role as scrum master"
-  ],
-  "record_relevance": 1
+  "project_type": "Web Development",
+  "project_title": "Vancouver Welcome Map",
+  "project_priority": 3,
+  "project_year": 2017,
+  "project_month": 12,
+  "project_description": "An online web map built to Syrian refugees new to Vancouver",
+  "project_link": "https://www.cbc.ca/news/canada/british-columbia/vancouver-welcome-map-jennifer-rae-pierce-1.3391655",
+  "project_image": "/images/welcome-map.png",
+  "project_status": "FINISHED, UNMAINTAINED",
+  "project_tags": [
+    "Web Dev",
+    "Volunteer",
+    "Maps"
+  ]
 },{
   "_id": {
-    "$oid": "5eb5fe31b71ca456bc71c21a"
+    "$oid": "5ed552ed5162737888710fea"
   },
-  "record_subtype": "language",
-  "record_title": "Java",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "",
-  "record_relevance": 1
+  "project_type": "Game Development",
+  "project_title": "Unreleased Tower Building Game",
+  "project_priority": 5,
+  "project_year": 2020,
+  "project_month": 2,
+  "project_description": "A fully-3d tower building simulation coming soon(ish) from SimuThink. I provided early design and development.",
+  "project_link": "http://www.simuthink.com/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "IN DEVELOPMENT",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D",
+    "Design"
+  ]
 },{
   "_id": {
-    "$oid": "5eb65020b71ca456bc71c21b"
+    "$oid": "5ed559245162737888710feb"
   },
-  "record_subtype": "technology",
-  "record_title": "Adobe Illustrator",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "",
-  "record_relevance": 2
+  "project_type": "Web Development",
+  "project_title": "faq.life",
+  "project_priority": 5,
+  "project_year": 2015,
+  "project_month": 1,
+  "project_description": "A PHP-based text generation engine for answering religious questions and generating inspirational posters using Markov chains.",
+  "project_link": "http://www.faq.life/",
+  "project_image": "/images/faqlife.png",
+  "project_status": "FINISHED, UNMAINTAINED",
+  "project_tags": [
+    "Web Dev",
+    "Art"
+  ]
 },{
   "_id": {
-    "$oid": "5eb8dbddb71ca456bc71c21c"
+    "$oid": "5ed55b705162737888710fec"
   },
-  "record_subtype": "",
-  "record_title": "Bachelor of Computer Science from UBC",
-  "record_date": "Sept 2018 to Aug 2020",
-  "record_text": "Pursued upper-level courses in AI, Machine Learning, Cognitive Science and Software Engineering",
-  "record_priority": "1",
-  "record_type": "education",
-  "record_subitems": [],
-  "record_relevance": 1
+  "project_type": "Research",
+  "project_title": "New Westminster Cultural Map",
+  "project_priority": 5,
+  "project_year": 2014,
+  "project_month": 1,
+  "project_description": "I was a research assistant for the New Westminster Cultural Map.",
+  "project_link": "http://www.newwestculturalmap.ca/",
+  "project_image": "/images/nwculturalmap.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Research",
+    "Art",
+    "Maps"
+  ]
 },{
   "_id": {
-    "$oid": "5eb8dd42b71ca456bc71c21d"
+    "$oid": "5ed55c775162737888710fed"
   },
-  "record_subtype": "language",
-  "record_title": "Python",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "",
-  "record_relevance": 2
+  "project_type": "Research",
+  "project_title": "Panel Presenter at 2013 AWP ",
+  "project_priority": 5,
+  "project_year": 2013,
+  "project_month": 3,
+  "project_description": "I presented on a panel on pedagogy with first books of contemporary poetry.",
+  "project_link": "https://www.awpwriter.org/awp_conference/archive/2013/fri",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Research",
+    "Art",
+    "Writing"
+  ]
 },{
   "_id": {
-    "$oid": "5ed513fa3750b23e38722194"
+    "$oid": "5ed55d235162737888710fee"
   },
-  "record_subtype": "language",
-  "record_title": "JavaScript",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
+  "project_type": "Game Development",
+  "project_title": "Tofu3D ",
+  "project_priority": 1,
+  "project_year": 2019,
+  "project_month": 3,
+  "project_description": "A Unity3D framework for making games with a more strict object oriented approach, optimized for better unit testing.",
+  "project_link": "https://github.com/joshuacassidygrant/tofu3d",
+  "project_image": "/images/TOFULogoSmall.png",
+  "project_status": "IN DEVELOPMENT",
+  "project_tags": [
+    "Game Dev",
+    "Unity3D",
+    "Tools Dev"
+  ]
 },{
   "_id": {
-    "$oid": "5ed5144e3750b23e38722195"
+    "$oid": "5ed560225162737888710fef"
   },
-  "record_subtype": "language",
-  "record_title": "C++",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
+  "project_type": "Web Development",
+  "project_title": "UbHub ",
+  "project_priority": 3,
+  "project_year": 2018,
+  "project_month": 1,
+  "project_description": "An online resource hub for urban biodiversity initiatives. I helped to develop the forum and map functionalities.",
+  "project_link": "https://www.ubhub.org/",
+  "project_image": "/images/ubhub.png",
+  "project_status": "NOT CURRENTLY CONTRIBUTING",
+  "project_tags": [
+    "Web Dev",
+    "Volunteer"
+  ]
 },{
   "_id": {
-    "$oid": "5ed514863750b23e38722196"
+    "$oid": "5ed562a05162737888710ff0"
   },
-  "record_subtype": "general",
-  "record_title": "Agile Processes",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
+  "project_type": "Web Development",
+  "project_title": "Lanterns at Guantánamo ",
+  "project_priority": 3,
+  "project_year": 2018,
+  "project_month": 1,
+  "project_description": "I designed and developed an archive website detailing poet Jordan Scott's media tour of the US facility at Guantánamo Bay",
+  "project_link": "https://lanternsatguantanamo.ca/",
+  "project_image": "/images/lanterns.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Web Dev",
+    "Design"
+  ]
 },{
   "_id": {
-    "$oid": "5ed5150e3750b23e38722197"
+    "$oid": "5ed57dce5162737888710ff1"
   },
-  "record_subtype": "technology",
-  "record_title": "MySQL",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "",
-  "record_relevance": 2
+  "project_type": "Other Development",
+  "project_title": "mz: A Music DSL ",
+  "project_priority": 4,
+  "project_year": 2020,
+  "project_month": 5,
+  "project_description": "My team designed a small DSL that uses Python to translate simplified input into sheet music and midi.",
+  "project_link": "https://github.com/joshuacassidygrant/410musicdsl/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Tools Dev",
+    "Design"
+  ]
 },{
   "_id": {
-    "$oid": "5ed5151e3750b23e38722198"
+    "$oid": "5ed57f155162737888710ff2"
   },
-  "record_subtype": "technology",
-  "record_title": "NoSQL",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "",
-  "record_relevance": 2
-},{
-  "_id": {
-    "$oid": "5ed515413750b23e38722199"
-  },
-  "record_subtype": "general",
-  "record_title": "Game Design",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed515903750b23e3872219a"
-  },
-  "record_subtype": "language",
-  "record_title": "PHP",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
-},{
-  "_id": {
-    "$oid": "5ed515a43750b23e3872219b"
-  },
-  "record_subtype": "language",
-  "record_title": "CSS",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
-},{
-  "_id": {
-    "$oid": "5ed515fb3750b23e3872219c"
-  },
-  "record_subtype": "general",
-  "record_title": "Substantive & Stylistic Editing",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed516043750b23e3872219d"
-  },
-  "record_subtype": "general",
-  "record_title": "Technical Writing",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed516573750b23e3872219e"
-  },
-  "record_subtype": "technology",
-  "record_title": "NodeJS",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
-},{
-  "_id": {
-    "$oid": "5ed516633750b23e3872219f"
-  },
-  "record_subtype": "technology",
-  "record_title": "ReactJS",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 2
-},{
-  "_id": {
-    "$oid": "5ed516953750b23e387221a0"
-  },
-  "record_subtype": "technology",
-  "record_title": "Web Development",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed516a83750b23e387221a1"
-  },
-  "record_subtype": "technology",
-  "record_title": "Unity3D",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed516f13750b23e387221a2"
-  },
-  "record_subtype": "general",
-  "record_title": "Communication & Teamwork",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed517463750b23e387221a3"
-  },
-  "record_subtype": "technology",
-  "record_title": "Visual Studio",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed517503750b23e387221a4"
-  },
-  "record_subtype": "technology",
-  "record_title": "IntelliJ",
-  "record_date": "null",
-  "record_text": "null",
-  "record_priority": "1",
-  "record_type": "skill",
-  "record_subitems": "null",
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed519df3750b23e387221a5"
-  },
-  "record_subtype": "tech",
-  "record_title": "Game Designer & Developer at SimuThink/Coder Commonwealth",
-  "record_date": "Feb 2018 to Sept 2018",
-  "record_text": "",
-  "record_priority": 120,
-  "record_type": "work",
-  "record_subitems": [
-    "Designed and developed original simulation games and custom visual analytics software in Unity and C#",
-    "Implemented processes to improve development process, including dependency injection and unit testing"
-  ],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed51c753750b23e387221a6"
-  },
-  "record_subtype": "tech",
-  "record_title": "Web Developer & Copywriter at Kyosei Creative",
-  "record_date": "May 2014 to Sept 2017",
-  "record_text": "",
-  "record_priority": 125,
-  "record_type": "work",
-  "record_subitems": [
-    "Developed customized PHP/WordPress solutions for eCommerce, eLearning and business automation",
-    "Built WordPress websites for small business, professional and pseudo-governmental clients",
-    "Provided copywriting and editing services",
-    "Helped develop training materials for small business owners"
-  ],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed51ce33750b23e387221a7"
-  },
-  "record_subtype": "tech",
-  "record_title": "Computer Science Teaching Assistant at UBC",
-  "record_date": "May 2020 to Aug 2020",
-  "record_text": "",
-  "record_priority": 115,
-  "record_type": "work",
-  "record_subitems": [
-    "Helped UBC students learn and apply the basics of JavaScript, React, Redux, MongoDB to deploy applications to Heroku",
-    "Provided design feedback and code review for student projects."
-  ],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed51e433750b23e387221a8"
-  },
-  "record_subtype": "tech",
-  "record_title": "Freelance Developer and Editor",
-  "record_date": "May 2013 to Present",
-  "record_text": "",
-  "record_priority": 100,
-  "record_type": "work",
-  "record_subitems": [
-    "Provided editing services for documents on subjects including mining, paramedic training, business and technology",
-    "Designed, developed and maintained small websites"
-  ],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed51f023750b23e387221a9"
-  },
-  "record_subtype": "tech",
-  "record_title": "Web Editor at EVENT Magazine",
-  "record_date": "Sept 2013 to Present",
-  "record_text": "",
-  "record_priority": 145,
-  "record_type": "work",
-  "record_subitems": [
-    "Helped with technical and design tasks for website revamps ",
-    "Provided ongoing support for managing new site content"
-  ],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed5201e3750b23e387221aa"
-  },
-  "record_subtype": "",
-  "record_title": "Diploma in Professional Writing from Douglas College",
-  "record_date": "Sept 2012 to June 2014",
-  "record_text": "With a focus in substantive editing and technical writing.",
-  "record_priority": "1",
-  "record_type": "education",
-  "record_subitems": [],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed520493750b23e387221ab"
-  },
-  "record_subtype": "",
-  "record_title": "Bachelor of Arts in English from SFU",
-  "record_date": "Sept 2009 to June 2011",
-  "record_text": "With a focus on contemporary and conceptual literature.",
-  "record_priority": "1",
-  "record_type": "education",
-  "record_subitems": [],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed520633750b23e387221ac"
-  },
-  "record_subtype": "",
-  "record_title": "Associate of Arts from Kwantlen Polytechnic University",
-  "record_date": "Jan 2008 to Aug 2009",
-  "record_text": "",
-  "record_priority": "1",
-  "record_type": "education",
-  "record_subitems": [],
-  "record_relevance": 1
-},{
-  "_id": {
-    "$oid": "5ed520e33750b23e387221ad"
-  },
-  "record_subtype": "",
-  "record_title": "Katimavik Youth Program Participant",
-  "record_date": "Nov 2007 to Aug 2008",
-  "record_text": "",
-  "record_priority": "1",
-  "record_type": "education",
-  "record_subitems": [],
-  "record_relevance": 1
+  "project_type": "Writing & Editing",
+  "project_title": "Paramedic Training Simulations & Manual ",
+  "project_priority": 4,
+  "project_year": 2015,
+  "project_month": 1,
+  "project_description": "Me and a small team edited the JIBC's manual for paramedic training using immersive simulations, and also worked on over 100 simulation scenarios.",
+  "project_link": "https://www.jibc.ca/",
+  "project_image": "/images/placeholder.png",
+  "project_status": "FINISHED",
+  "project_tags": [
+    "Writing",
+    "Editing"
+  ]
 }]
