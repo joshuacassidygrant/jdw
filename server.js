@@ -121,6 +121,10 @@ api.route('/send').post((req, res) => {
     });
   }
   
+  app.get('/files/*', function (req, res) {
+    res.sendFile(req.path)
+  })
+
   app.get('*', function (req, res) {
     res.sendFile(path.resolve('./client/build/index.html'));
   }); 
