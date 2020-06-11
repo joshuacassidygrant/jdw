@@ -8,6 +8,7 @@ export default class Resume extends Component {
     render() {
         return (
             <div className="resume">
+                <a href="files/RESUME_GrantJoshua_2020.pdf" rel="noopener noreferrer" target="_blank"> Download PDF </a>
                 <h2>Education</h2>
                 <ResumeSection title="" type="education" subtype="" renderer="block"/>
                 <h2>Skills</h2> 
