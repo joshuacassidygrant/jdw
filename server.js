@@ -126,7 +126,7 @@ api.route('/send').post((req, res) => {
   app.get('/files/:file', function (req, res) {
 
     var fileName = "DOWNLOAD.pdf";
-    var filePath = path.resolve(__dirname, `./client/public/files/${req.params.file}`)
+    var filePath = path.resolve(`./client/public/files/${req.params.file}`);
     res.download(filePath, fileName);    
   })
 
