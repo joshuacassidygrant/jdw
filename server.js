@@ -5,6 +5,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const fs = require('fs');
 const cors = require('cors');
 const PORT = process.env.PORT  || 4000;
 const nodemailer = require('nodemailer');
@@ -124,12 +125,9 @@ api.route('/send').post((req, res) => {
 
 
   app.get('/files/:file', function (req, res) {
-    res.sendFile(req.path)
-
-    var filePath = `/files/{file}`;
-    var fileName = "DOWNLOAD.pdf";
-
-    res.download(filePath, fileName);    
+    var data = fs.readFileSync( path.resolve(`./files/${req.params.file}`));
+    res.contentType("application/pdf");
+    res.send(data);
   })
 
   app.get('*', function (req, res) {
