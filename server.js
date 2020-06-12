@@ -125,7 +125,7 @@ api.route('/send').post((req, res) => {
 
 
   app.get('/files/:file', function (req, res) {
-    var data = fs.readFileSync( `./files/${req.params.file}`);
+    var data = fs.readFileSync( path.resolve(`./files/${req.params.file}`));
     res.contentType("application/pdf");
     res.send(data);
   })
