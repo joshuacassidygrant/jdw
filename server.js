@@ -1,6 +1,6 @@
 const ResumeRecord = require('./data/resume_record.model.js');
 const Project = require('./data/project.model.js');
-
+const dotenv = require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -12,13 +12,12 @@ const nodemailer = require('nodemailer');
 var path = require('path');
 const emailUser = process.env.EM_USER;
 const emailPass = process.env.EM_PASS;
-const url  = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/jdw';
-console.log(url);
+const url  =  process.env.MONGODB_URI;
 app.use(cors());
 app.use(bodyParser.json());
 
 
-mongoose.connect(`${url}`, { useNewUrlParser: true });
+mongoose.connect(`${url}`, { useNewUrlParser: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 
 connection.once('open', function() {
