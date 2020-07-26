@@ -71,12 +71,12 @@ api.route('/resume/:type/:subtype').get((req, res) => {
 
 
 api.route('/send').post((req, res) => {
-    var name = req.body.name
-    var email = req.body.email
-    var message = req.body.message
-    var content = `name: ${name} \n email: ${email} \n message: ${message} `
+    let name = req.body.name
+    let email = req.body.email
+    let message = req.body.message
+    let content = `name: ${name} \n email: ${email} \n message: ${message} `
   
-    var mail = {
+    let mail = {
       from: name,
       to: "jc.grant22@gmail.com",
       subject: 'New Message from Contact Form',

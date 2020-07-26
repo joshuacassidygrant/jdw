@@ -30,7 +30,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
         if (this.state.status !== "") {
             return (
                 <div className="form_holder">
-                    <p className="status loading">{this.state.status}</p>
+                    <p className="status">{this.state.status}</p>
                 </div>
             )
         }
@@ -67,7 +67,7 @@ export default class ContactForm extends Component<ContactFormProps, ContactForm
             body: JSON.stringify({
                 name: this.state.name,   
                 email: this.state.email,  
-                messsage: this.state.message
+                message: this.state.message
             })
         }).then((res) => {
             if (res.status !== 200) {
