@@ -24,20 +24,19 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
+
+const root = path.join(__dirname, '..', 'client', 'build');
+
 app.listen(PORT, function() {
     console.log("Server running on port " + PORT);
 });
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
-
-}
-
-
+//if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(root));
+//}
 
 const api = express.Router();
 app.use("/api", api);
-
 
 
 api.route('/projects/').get((req, res) => {
@@ -97,8 +96,6 @@ api.route('/send').post((req, res) => {
     })
   })
 
-
-
   let transport = {
     host: 'smtp.gmail.com',
     auth: {
@@ -106,7 +103,7 @@ api.route('/send').post((req, res) => {
       pass: emailPass
     }
   }
-  
+
 
   let transporter;
 
@@ -120,15 +117,17 @@ api.route('/send').post((req, res) => {
       }
     });
   }
-  
 
 
   app.get('/files/:file', function (req, res) {
-    var data = fs.readFileSync( path.resolve(`./files/${req.params.file}`));
+    var data = fs.readFileSync( path.resolve(`../files/${req.params.file}`));
     res.contentType("application/pdf");
     res.send(data);
   })
 
-  app.get('*', function (req, res) {
-    res.sendFile(path.resolve('./client/build/index.html'));
-  }); 
+  app.use(function(req, res, next) {
+    if (req.method === 'GET' && req.accepts('html') && !req.is('json') && !req.path.includes('.')) {
+      res.sendFile('index.html', {root})
+    } else next()
+  })
+  
