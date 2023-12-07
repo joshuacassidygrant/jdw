@@ -1,3 +1,2 @@
 # jdw
-It's my professional resume website, plus a cool falling sand game.
-See it at joshua.works
+It's my professional resume website, plus a cool falling sand game. See it at [joshua.works](https://joshua.works)
